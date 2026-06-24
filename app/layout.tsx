@@ -3,7 +3,18 @@ import "./global.css";
 import { ReactNode } from "react";
 
 export const metadata = {
-  title: `Dev File-2`,
+  title: `Lenient Tree`,
+  description: "Lenient Tree - Learning Platform",
+  icons: {
+    icon: "/favicon/favicon.ico",
+    apple: "/favicon/apple-touch-icon.png",
+    other: {
+      rel: "icon",
+      url: "/favicon/favicon-96x96.png",
+      sizes: "96x96",
+    },
+  },
+  manifest: "/favicon/site.webmanifest",
 };
 
 export default function RootLayout({
@@ -13,6 +24,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <link rel="icon" href="/favicon/favicon.ico" />
+        <link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png" />
+        <link rel="manifest" href="/favicon/site.webmanifest" />
+      </head>
       <body suppressHydrationWarning>{children}</body>
     </html>
   );

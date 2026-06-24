@@ -127,7 +127,8 @@
   background-color: var(--color-silver);
   overflow: hidden;
   display: flex;
-  align-items: flex-start;
+  flex-direction: column;
+  align-items: stretch;
   min-width: var(--min-w-380);
   max-height: var(--max-h-400_7);
   flex-shrink: 0;
@@ -140,46 +141,45 @@
 .frameContainer,
 .frameContainer:hover {
   flex: 1;
-  justify-content: flex-end;
   max-width: 100%;
-  gap: var(--gap-10) var(--gap-0);
 }
 .frameContainer:hover {
   background-color: var(--color-silver);
   display: flex;
   height: var(--height-400_7);
-  flex-direction: row;
-  align-items: flex-start;
+  flex-direction: column;
+  align-items: stretch;
   border-radius: var(--br-12);
   min-width: var(--min-w-380);
   max-height: var(--max-h-400_7);
 }
 .frame {
-  padding: var(--padding-0) var(--padding-0) var(--padding-8_3) var(--padding-8);
+  padding: 0;
   background-image: url(/Frame@3x.png);
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: top;
+  background-position: center;
   transform: rotate(0deg);
   flex-shrink: 0;
+  height: 100%;
 }
 .frame,
 .frame:hover,
 .rayPoderParent,
 .rayPoderParent:hover {
   display: flex;
-  height: auto;
-  align-items: flex-start;
+  align-items: flex-end;
   box-sizing: border-box;
 }
 .frame:hover {
   flex: 1;
-  flex-direction: row;
+  flex-direction: column;
   gap: var(--gap-10) var(--gap-0);
   justify-content: flex-end;
   transform: rotate(0deg);
-  padding: var(--padding-0) var(--padding-0) var(--padding-8_3) var(--padding-8);
+  padding: 0;
   max-width: 100%;
+  height: 100%;
 }
 .rayPoderParent,
 .rayPoderParent:hover {
@@ -187,16 +187,17 @@
   width: 100%;
   flex-direction: column;
   gap: var(--gap-2) var(--gap-10);
-  border-radius: var(--br-12);
-  padding: var(--padding-342) var(--padding-19) var(--padding-8_7);
-  max-width: var(--max-w-400_7);
+  border-radius: 0 0 var(--br-12) var(--br-12);
+  padding: var(--padding-16) var(--padding-19);
+  max-width: 100%;
+  justify-content: flex-end;
+  flex-shrink: 0;
 }
 .rayPoderParent {
-  flex: 1;
   overflow: hidden;
 }
 .rayPoderParent:hover {
-  justify-content: flex-start;
+  justify-content: flex-end;
 }
 .rayPoder {
   margin: 0;
@@ -254,8 +255,29 @@
   .frameGroup {
     gap: var(--gap-16);
   }
+  .speakerSpotlight,
+  .speakerSpotlight:hover {
+    font-size: 30px;
+  }
+  .frameContainer,
+  .frameContainer:hover {
+    flex: 1 1 280px;
+    min-width: min(100%, 320px);
+    height: auto;
+    aspect-ratio: 0.95;
+  }
+  .rayPoderParent,
+  .rayPoderParent:hover {
+    justify-content: flex-end;
+    padding: 0 18px 18px;
+    max-width: 100%;
+  }
 }
 @media screen and (max-width: 450px) {
+  .learnInner,
+  .learnInner:hover {
+    padding: 40px 0;
+  }
   .frameParent {
     gap: var(--gap-20);
   }
@@ -265,8 +287,11 @@
   .frameContainer {
     min-width: 100%;
   }
+  .speakerSpotlight,
+  .speakerSpotlight:hover {
+    font-size: 24px;
+  }
   .rayPoderParent {
-    padding-top: var(--padding-222);
     padding-bottom: var(--padding-20);
     box-sizing: border-box;
     max-width: 100%;

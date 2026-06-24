@@ -159,7 +159,8 @@
   display: block;
   width: 100%;
   height: auto;
-  border: var(--border-2);
+  border: none;
+  background: transparent;
   box-sizing: border-box;
   max-width: 692px;
   margin-top: -11px;
@@ -202,30 +203,121 @@
   color: var(--Assets-Colours-Surface-background);
 }
 @media screen and (max-width: 800px) {
-  .quoteTextBlockParent {
-    max-width: 100%;
+  .frameParent,
+  .frameParent:hover {
+    position: relative;
+    top: auto;
+    right: auto;
+    width: min(100%, 705px);
+    height: auto;
+    gap: 26px;
+    margin: 12px auto 44px !important;
+    z-index: 2;
+    align-items: center;
   }
-  .theIlliterateOf {
-    font-size: var(--fs-29);
+  .quoteTextBlockParent,
+  .quoteTextBlockParent:hover {
+    height: auto;
+    min-height: 0;
+    max-width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+  .quoteTextBlock,
+  .quoteTextBlock:hover {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 100%;
+    align-items: center;
+    gap: 4px;
+    padding: 38px 0 18px;
+    box-sizing: border-box;
+  }
+  .theIlliterateOf,
+  .theIlliterateOf:hover,
+  .beThoseWho,
+  .beThoseWho:hover,
+  .thoseWhoCannot,
+  .thoseWhoCannot:hover {
+    font-size: 26px;
+    line-height: 1.3;
+    text-align: center;
+    white-space: normal;
+  }
+  .theIlliterateOfThe21stCen,
+  .theIlliterateOfThe21stCen:hover,
+  .thoseWhoCannot,
+  .thoseWhoCannot:hover {
+    height: auto;
+    padding: 0;
   }
   .beThoseWho {
     max-width: 100%;
+    white-space: normal;
   }
-  .beThoseWho,
-  .thoseWhoCannot {
-    font-size: var(--fs-29);
+  .frameChild {
+    top: 0;
+    left: 8px;
+    width: 36px;
+    height: 25px;
+  }
+  .frameItem {
+    top: auto;
+    right: 8px;
+    bottom: 0;
+    left: auto;
+    width: 36px;
+    height: 25px;
   }
   .frameInner {
     max-width: 100%;
+    margin-top: 0;
+  }
+  .learningIsNoLongerOccasionParent,
+  .learningIsNoLongerOccasionParent:hover {
+    gap: 26px;
+    padding: 0 20px;
+  }
+  .learningIsNo {
+    text-align: center;
   }
 }
 @media screen and (max-width: 450px) {
+  .frameParent,
+  .frameParent:hover {
+    gap: 20px;
+    margin-bottom: 34px !important;
+  }
+  .quoteTextBlockParent,
+  .quoteTextBlockParent:hover {
+    padding: 0 16px;
+  }
+  .quoteTextBlock,
+  .quoteTextBlock:hover {
+    padding-top: 34px;
+    gap: 2px;
+  }
   .beThoseWho,
+  .beThoseWho:hover,
   .theIlliterateOf,
-  .thoseWhoCannot {
-    font-size: var(--fs-22);
+  .theIlliterateOf:hover,
+  .thoseWhoCannot,
+  .thoseWhoCannot:hover {
+    font-size: 20px;
+    line-height: 1.35;
+  }
+  .frameChild,
+  .frameItem {
+    width: 28px;
+    height: 20px;
+  }
+  .learningIsNoLongerOccasionParent,
+  .learningIsNoLongerOccasionParent:hover {
+    padding: 0 16px;
   }
   .learningIsNo {
-    font-size: var(--fs-19);
+    font-size: 18px;
+    line-height: 1.4;
   }
 }

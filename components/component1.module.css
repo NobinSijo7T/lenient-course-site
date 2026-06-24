@@ -30,3 +30,16 @@
   color: var(--color-black);
   text-align: left;
 }
+@media screen and (max-width: 800px) {
+  .component163,
+  .component163:hover {
+    min-height: 56px;
+    height: auto;
+    padding: 12px 24px;
+  }
+}
+@media screen and (max-width: 380px) {
+  .register {
+    font-size: 17px;
+  }
+}
