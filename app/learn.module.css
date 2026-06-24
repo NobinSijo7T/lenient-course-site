@@ -6,7 +6,7 @@
   overflow-x: hidden;
   overflow-y: auto;
   isolation: isolate;
-  gap: 34px var(--gap-10);
+  gap: 0px;
   line-height: normal;
   letter-spacing: normal;
 }
@@ -35,7 +35,7 @@
 .learn:hover {
   background-color: var(--color-gainsboro);
   width: 100%;
-  gap: 34px var(--gap-10);
+  gap: 0px;
   justify-content: flex-start;
   line-height: normal;
   letter-spacing: normal;
@@ -63,11 +63,9 @@
 .bottomRightPixelArtParent:hover {
   display: block;
   width: 100%;
-  /* Responsive hero height — fills the visible viewport, grows if content needs more.
-     Uses dvh (dynamic viewport height) so iOS Safari / Android Chrome address bars
-     are accounted for. Falls back to vh for older browsers. */
-  min-height: 100vh;
-  min-height: 100dvh;
+  /* Reduced height to bring sections closer together */
+  min-height: 85vh;
+  min-height: 85dvh;
   height: auto;
   max-width: none;
 }
