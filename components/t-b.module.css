@@ -143,8 +143,12 @@
 .text3 {
   cursor: pointer;
   z-index: 2;
-  color: var(--Assets-Colours-Brand-static);
   position: relative;
+}
+
+.activeText {
+  color: var(--Assets-Colours-Brand-static) !important;
+  transition: color 250ms ease;
 }
 
 .text3:hover {
@@ -168,7 +172,6 @@
   font-family: var(--font-urbanist);
   font-size: var(--Heading-5);
   text-align: left;
-  color: var(--Assets-Colours-Brand-static);
 }
 .text4,
 .text4:hover {

@@ -3,30 +3,39 @@
 import { useEffect, useRef, memo } from 'react';
 import './SquareField.css';
 
-const SquareField = memo(({
+interface SquareFieldProps {
+  squareSize?: number;
+  squareSpacing?: number;
+  cursorRadius?: number;
+  bulgeStrength?: number;
+  gradientFrom?: string;
+  gradientTo?: string;
+}
+
+const SquareField = memo<SquareFieldProps>(({
   squareSize = 6,
   squareSpacing = 20,
   cursorRadius = 400,
   bulgeStrength = 50,
   gradientFrom = 'rgba(154, 230, 0, 0.7)',
   gradientTo = 'rgba(100, 180, 50, 0.6)',
-  ...rest
 }) => {
-  const canvasRef = useRef(null);
-  const squaresRef = useRef([]);
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+  const squaresRef = useRef<Array<{ ax: number; ay: number; sx: number; sy: number; x: number; y: number }>>([]);
   const mouseRef = useRef({ x: -9999, y: -9999, prevX: -9999, prevY: -9999, speed: 0 });
-  const rafRef = useRef(null);
+  const rafRef = useRef<number | null>(null);
   const sizeRef = useRef({ w: 0, h: 0, offsetX: 0, offsetY: 0 });
   const engagement = useRef(0);
-  const propsRef = useRef({});
+  const propsRef = useRef<Omit<SquareFieldProps, 'children'>>({});
   propsRef.current = { squareSize, squareSpacing, cursorRadius, bulgeStrength, gradientFrom, gradientTo };
 
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
     const ctx = canvas.getContext('2d', { alpha: true });
+    if (!ctx) return;
     const dpr = Math.min(window.devicePixelRatio || 1, 2);
-    let resizeTimer;
+    let resizeTimer: NodeJS.Timeout;
 
     function resize() {
       clearTimeout(resizeTimer);
@@ -34,7 +43,8 @@ const SquareField = memo(({
     }
 
     function doResize() {
-      const rect = canvas.parentElement.getBoundingClientRect();
+      if (!canvas) return;
+      const rect = canvas.parentElement!.getBoundingClientRect();
       const w = rect.width;
       const h = rect.height;
 
@@ -42,7 +52,7 @@ const SquareField = memo(({
       canvas.height = h * dpr;
       canvas.style.width = `${w}px`;
       canvas.style.height = `${h}px`;
-      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      ctx!.setTransform(dpr, 0, 0, dpr, 0, 0);
 
       sizeRef.current = {
         w,
@@ -54,9 +64,9 @@ const SquareField = memo(({
       buildSquares(w, h);
     }
 
-    function buildSquares(w, h) {
+    function buildSquares(w: number, h: number) {
       const p = propsRef.current;
-      const step = p.squareSize + p.squareSpacing;
+      const step = (p.squareSize || 6) + (p.squareSpacing || 20);
       const cols = Math.floor(w / step);
       const rows = Math.floor(h / step);
       const padX = (w % step) / 2;
@@ -74,13 +84,13 @@ const SquareField = memo(({
       squaresRef.current = squares;
     }
 
-    function onMouseMove(e) {
+    function onMouseMove(e: MouseEvent) {
       const s = sizeRef.current;
       mouseRef.current.x = e.pageX - s.offsetX;
       mouseRef.current.y = e.pageY - s.offsetY;
     }
 
-    function onTouchMove(e) {
+    function onTouchMove(e: TouchEvent) {
       if (e.touches.length > 0) {
         const s = sizeRef.current;
         const touch = e.touches[0];
@@ -103,6 +113,7 @@ const SquareField = memo(({
     const speedInterval = setInterval(updateMouseSpeed, 20);
 
     function tick() {
+      if (!ctx) return;
       const squares = squaresRef.current;
       const m = mouseRef.current;
       const { w, h } = sizeRef.current;
@@ -117,13 +128,15 @@ const SquareField = memo(({
       ctx.clearRect(0, 0, w, h);
 
       const grad = ctx.createLinearGradient(0, 0, w, h);
-      grad.addColorStop(0, p.gradientFrom);
-      grad.addColorStop(1, p.gradientTo);
+      grad.addColorStop(0, p.gradientFrom || 'rgba(154, 230, 0, 0.7)');
+      grad.addColorStop(1, p.gradientTo || 'rgba(100, 180, 50, 0.6)');
       ctx.fillStyle = grad;
 
-      const cr = p.cursorRadius;
+      const cr = p.cursorRadius || 400;
       const crSq = cr * cr;
-      const halfSize = p.squareSize / 2;
+      const sqSize = p.squareSize || 6;
+      const halfSize = sqSize / 2;
+      const bulge = p.bulgeStrength || 50;
 
       for (let i = 0; i < len; i++) {
         const sq = squares[i];
@@ -134,7 +147,7 @@ const SquareField = memo(({
         if (distSq < crSq && eng > 0.01) {
           const dist = Math.sqrt(distSq);
           const t = 1 - dist / cr;
-          const push = t * t * p.bulgeStrength * eng;
+          const push = t * t * bulge * eng;
           const angle = Math.atan2(dy, dx);
           sq.sx += (sq.ax - Math.cos(angle) * push - sq.sx) * 0.15;
           sq.sy += (sq.ay - Math.sin(angle) * push - sq.sy) * 0.15;
@@ -147,8 +160,8 @@ const SquareField = memo(({
         ctx.fillRect(
           sq.sx - halfSize,
           sq.sy - halfSize,
-          p.squareSize,
-          p.squareSize
+          sqSize,
+          sqSize
         );
       }
 
@@ -162,17 +175,17 @@ const SquareField = memo(({
     rafRef.current = requestAnimationFrame(tick);
 
     return () => {
-      cancelAnimationFrame(rafRef.current);
+      if (rafRef.current) cancelAnimationFrame(rafRef.current);
       clearInterval(speedInterval);
       clearTimeout(resizeTimer);
       window.removeEventListener('resize', resize);
       window.removeEventListener('mousemove', onMouseMove);
       window.removeEventListener('touchmove', onTouchMove);
     };
-  }, []);
+  }, [squareSize, squareSpacing, cursorRadius, bulgeStrength, gradientFrom, gradientTo]);
 
   return (
-    <div className="square-field-container" {...rest}>
+    <div className="square-field-container">
       <canvas
         ref={canvasRef}
         style={{

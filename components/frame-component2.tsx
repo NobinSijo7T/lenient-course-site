@@ -1,5 +1,5 @@
 import type { NextPage } from "next";
-import DotField from "./DotField";
+import SquareField from "./SquareField";
 import styles from "./frame-component2.module.css";
 
 export type FrameComponent2Type = {
@@ -9,17 +9,7 @@ export type FrameComponent2Type = {
 const FrameComponent2: NextPage<FrameComponent2Type> = ({ className = "" }) => {
   return (
     <section className={[styles.learnInner, className].join(" ")}>
-      <DotField
-        dotRadius={2.5}
-        dotSpacing={18}
-        cursorRadius={500}
-        bulgeOnly={true}
-        bulgeStrength={67}
-        glowRadius={160}
-        gradientFrom="rgba(154, 230, 0, 1)"
-        gradientTo="rgba(154, 230, 0, 0.9)"
-        glowColor="#9ae600"
-      />
+      <SquareField />
       <div className={styles.frameParent}>
         <button className={styles.speakerSpotlightWrapper}>
           <b className={styles.speakerSpotlight}>Speaker Spotlight</b>

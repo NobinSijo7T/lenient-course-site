@@ -12,13 +12,13 @@ interface AnimatedQuoteProps {
 export default function AnimatedQuote({ children, className, delayOffset = 0 }: AnimatedQuoteProps) {
   // If children is a string, we split it into words. If it's React nodes, we animate the whole block.
   // For maximum smoothness, we'll animate line by line or word by word if it's text.
-  
+
   // Since we have mixed HTML nodes (<i> etc) in frame-component1, we'll just animate the container 
   // with a smooth reveal, or we can split strings if passed as string.
-  
+
   if (typeof children === 'string') {
     const words = children.split(' ');
-    
+
     const container = {
       hidden: { opacity: 0 },
       visible: (i = 1) => ({
@@ -26,14 +26,14 @@ export default function AnimatedQuote({ children, className, delayOffset = 0 }: 
         transition: { staggerChildren: 0.08, delayChildren: delayOffset * 0.3 },
       }),
     };
-    
+
     const child = {
       visible: {
         opacity: 1,
         y: 0,
         filter: 'blur(0px)',
         transition: {
-          type: 'spring',
+          type: 'spring' as const,
           damping: 12,
           stiffness: 100,
         },
@@ -43,7 +43,7 @@ export default function AnimatedQuote({ children, className, delayOffset = 0 }: 
         y: 20,
         filter: 'blur(4px)',
         transition: {
-          type: 'spring',
+          type: 'spring' as const,
           damping: 12,
           stiffness: 100,
         },

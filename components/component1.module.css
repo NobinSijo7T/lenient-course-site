@@ -13,15 +13,61 @@
   box-sizing: border-box;
   border: var(--border-3);
   box-shadow: var(--shadow-inner);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .component163 {
   cursor: pointer;
   overflow: hidden;
   flex-shrink: 0;
+  position: relative;
 }
+
+.component163::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
 .component163:hover {
   flex-direction: row;
+  transform: translateY(-3px);
+  box-shadow: 
+    var(--shadow-inner),
+    0 8px 25px rgba(100, 244, 34, 0.4);
+  background-color: #6af426;
 }
+
+.component163:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+.component163:active {
+  transform: translateY(-1px) scale(0.98);
+  box-shadow: 
+    var(--shadow-inner),
+    0 4px 15px rgba(100, 244, 34, 0.3);
+}
+
+@keyframes ripple {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(4);
+    opacity: 0;
+  }
+}
+
 .register {
   position: relative;
   font-size: var(--Heading-5);
@@ -29,7 +75,14 @@
   font-family: var(--font-urbanist);
   color: var(--color-black);
   text-align: left;
+  transition: transform 0.3s ease;
+  z-index: 1;
 }
+
+.component163:hover .register {
+  transform: scale(1.05);
+}
+
 @media screen and (max-width: 800px) {
   .component163,
   .component163:hover {

@@ -14,8 +14,8 @@ const Learn: NextPage = () => {
       <main className={styles.learnInner}>
         <div className={styles.bottomRightPixelArtParent}>
           <SquareField
-            squareSize={6}
-            squareSpacing={20}
+            squareSize={4}
+            squareSpacing={18}
             cursorRadius={400}
             bulgeStrength={50}
             gradientFrom="rgba(154, 230, 0, 0.8)"
