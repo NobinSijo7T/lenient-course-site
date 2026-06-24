@@ -5,10 +5,12 @@
 }
 .learnInner,
 .learnInner:hover {
+  position: relative;
   background-color: var(--color-gainsboro);
   display: flex;
   align-self: stretch;
   width: 100%;
+  min-height: 100vh;
   height: auto;
   gap: var(--gap-0) var(--gap-10);
   align-items: center;
@@ -300,4 +302,10 @@
   .rayPoder {
     font-size: var(--fs-16);
   }
+}
+
+
+.frameParent {
+  position: relative;
+  z-index: 1;
 }

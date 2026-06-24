@@ -1,6 +1,7 @@
 import type { NextPage } from "next";
 import Image from "next/image";
 import Component1 from "./component1";
+import AnimatedQuote from "./animated-quote";
 import styles from "./frame-component1.module.css";
 
 export type FrameComponent1Type = {
@@ -13,17 +14,16 @@ const FrameComponent1: NextPage<FrameComponent1Type> = ({ className = "" }) => {
       <div className={styles.quoteTextBlockParent}>
         <div className={styles.quoteTextBlock}>
           <div className={styles.theIlliterateOfThe21stCen}>
-            <i className={styles.theIlliterateOf}>
+            <AnimatedQuote className={styles.theIlliterateOf} delayOffset={0}>
               The illiterate of the 21st century will not
-            </i>
+            </AnimatedQuote>
           </div>
-          <i className={styles.beThoseWho}>
-            {" "}
-            be those who cannot read and write, but.
-          </i>
-          <i className={styles.thoseWhoCannot}>
+          <AnimatedQuote className={styles.beThoseWho} delayOffset={1}>
+            be those who cannot read and write, but
+          </AnimatedQuote>
+          <AnimatedQuote className={styles.thoseWhoCannot} delayOffset={2}>
             those who cannot learn, unlearn and relearn.
-          </i>
+          </AnimatedQuote>
         </div>
         <Image
           className={styles.frameChild}
@@ -51,11 +51,9 @@ const FrameComponent1: NextPage<FrameComponent1Type> = ({ className = "" }) => {
         src="/Line-3.svg"
       />
       <div className={styles.learningIsNoLongerOccasionParent}>
-        <div className={styles.learningIsNo}>
-          Learning is no longer occasional. The people shaping tomorrow are the
-          ones constantly adapting today exploring ideas, sharing knowledge and
-          evolving through experience
-        </div>
+        <AnimatedQuote className={styles.learningIsNo} delayOffset={3}>
+          Learning is no longer occasional. The people shaping tomorrow are the ones constantly adapting today exploring ideas, sharing knowledge and evolving through experience
+        </AnimatedQuote>
         <Component1 property1="Row" />
       </div>
     </section>

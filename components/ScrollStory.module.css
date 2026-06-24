@@ -5,16 +5,31 @@
   width: 100%;
   margin: 0;
   padding: 0;
-  min-height: 100vh;
 }
 
 /* Sticky Container */
 .stickyContainer {
-  position: relative;
-  top: 0;
   height: 100vh;
   width: 100%;
   overflow: hidden;
+}
+
+.stickyTop {
+  position: absolute;
+  top: 0;
+}
+
+.stickyFixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+.stickyBottom {
+  position: absolute;
+  bottom: 0;
 }
 
 /* Desktop Layout */
