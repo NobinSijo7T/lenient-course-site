@@ -142,7 +142,14 @@ const ScrollStory = ({ chapters: customChapters }: ScrollStoryProps) => {
     );
   };
 
-  const getPrevChapter = () => (activeIndex > 0 ? chapters[activeIndex - 1].name : null);
+  const getPreviousChapters = () => {
+    const prevChapters = [];
+    for (let i = 0; i < activeIndex; i++) {
+      prevChapters.push(chapters[i].name);
+    }
+    return prevChapters;
+  };
+  
   const getNextChapter = () =>
     activeIndex < chapters.length - 1 ? chapters[activeIndex + 1].name : null;
 
@@ -168,7 +175,9 @@ const ScrollStory = ({ chapters: customChapters }: ScrollStoryProps) => {
           </div>
 
           <div className={styles.mobileCenterText}>
-            {getPrevChapter() && <div className={styles.surroundingChapter}>{getPrevChapter()}</div>}
+            {getPreviousChapters().map((chapterName, idx) => (
+              <div key={idx} className={styles.surroundingChapter}>{chapterName}</div>
+            ))}
             <div
               className={`${styles.activeChapter} ${styles.mobileActiveChapter} ${isAnimating ? styles.animating : ''}`}
             >
@@ -189,7 +198,9 @@ const ScrollStory = ({ chapters: customChapters }: ScrollStoryProps) => {
           </div>
 
           <div className={styles.centerPanel}>
-            {getPrevChapter() && <div className={styles.surroundingChapter}>{getPrevChapter()}</div>}
+            {getPreviousChapters().map((chapterName, idx) => (
+              <div key={idx} className={styles.surroundingChapter}>{chapterName}</div>
+            ))}
             <div
               className={`${styles.activeChapter} ${styles.desktopActiveChapter} ${isAnimating ? styles.animating : ''}`}
             >
