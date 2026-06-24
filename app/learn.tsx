@@ -103,9 +103,9 @@ const Learn: NextPage = () => {
         </div>
       </main>
       <TB />
-      <ScrollStory />
       <FrameComponent />
       <FrameComponent1 />
+      <ScrollStory />
       <FrameComponent2 />
       <Footer />
     </div>

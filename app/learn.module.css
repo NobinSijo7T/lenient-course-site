@@ -18,12 +18,8 @@
     flex-direction: column;
   }
   
-  .learn > main {
-    order: 1;
-  }
-  
-  .learn > header {
-    order: 0;
+  .learnInner {
+    order: -1;
   }
 }
 .learn,
