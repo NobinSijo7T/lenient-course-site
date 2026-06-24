@@ -67,27 +67,19 @@
   }
 }
 
-@keyframes pulse {
-  0%, 100% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.05);
-  }
-}
-
 .speakerSpotlightWrapper {
   cursor: pointer;
   padding: 0;
+  background-color: var(--color-teal);
+  border: 2px solid var(--color-dimgray-100);
+  box-sizing: border-box;
 }
 .speakerSpotlightWrapper:hover {
-  background-color: var(--color-darkslategray-300);
+  background-color: var(--color-teal);
+  border: 2px solid var(--color-dimgray-100);
   flex-direction: row;
-  border: var(--border-2);
   box-sizing: border-box;
-  animation: pulse 0.6s ease-in-out;
 }
-.speakerSpotlightWrapper,
 .speakerSpotlightWrapper:active {
   background-color: var(--color-teal);
   border: 2px solid var(--color-dimgray-100);
