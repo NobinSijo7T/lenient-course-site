@@ -6,7 +6,7 @@
   overflow-x: hidden;
   overflow-y: auto;
   isolation: isolate;
-  gap: 0px;
+  gap: 34px var(--gap-10);
   line-height: normal;
   letter-spacing: normal;
 }
@@ -35,7 +35,7 @@
 .learn:hover {
   background-color: var(--color-gainsboro);
   width: 100%;
-  gap: 0px;
+  gap: 34px var(--gap-10);
   justify-content: flex-start;
   line-height: normal;
   letter-spacing: normal;
