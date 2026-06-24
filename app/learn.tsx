@@ -1,4 +1,7 @@
+'use client';
+
 import type { NextPage } from "next";
+import { useEffect, useRef, useState } from "react";
 import TB from "../components/t-b";
 import ScrollStory from "../components/ScrollStory";
 import FrameComponent from "../components/frame-component";
@@ -8,10 +11,37 @@ import Footer from "../components/footer";
 import styles from "./learn.module.css";
 
 const Learn: NextPage = () => {
+  const [isPixelArtVisible, setIsPixelArtVisible] = useState(true);
+  const heroRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (heroRef.current) {
+        const heroBottom = heroRef.current.offsetTop + heroRef.current.offsetHeight;
+        const scrollPosition = window.scrollY;
+        
+        // Hide pixel art when scrolled past hero section
+        setIsPixelArtVisible(scrollPosition < heroBottom);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll(); // Check initial state
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
     <div className={styles.learn}>
       {/* Fixed-position decorative pixel art layer — purely visual, out of layout flow */}
-      <main className={styles.learnInner}>
+      <main 
+        className={styles.learnInner}
+        style={{ 
+          opacity: isPixelArtVisible ? 0.94 : 0,
+          visibility: isPixelArtVisible ? 'visible' : 'hidden',
+          transition: 'opacity 0.3s ease, visibility 0.3s ease'
+        }}
+      >
         <div className={styles.bottomRightPixelArtParent}>
           <section className={styles.bottomRightPixelArt}>
             <div className={styles.bottomRightPixelArtChild} />
@@ -105,7 +135,7 @@ const Learn: NextPage = () => {
       </main>
       <TB />
       {/* Hero section — viewport-fitted container independent of decorative elements */}
-      <div className={styles.heroSection} id="home">
+      <div ref={heroRef} className={styles.heroSection} id="home">
         <FrameComponent />
         <FrameComponent1 />
       </div>

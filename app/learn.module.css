@@ -36,21 +36,24 @@
   line-height: normal;
   letter-spacing: normal;
 }
+
 .learnInner,
 .learnInner:hover {
   /* Taken fully out of normal flow — purely a visual layer */
   position: fixed;
   inset: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh;
+  max-height: 100vh;
   pointer-events: none;
   z-index: 0;
-  opacity: 0.94;
   overflow: hidden;
 }
+
 .learnInner {
   flex-shrink: 0;
 }
+
 .learnInner:hover {
   justify-content: flex-start;
 }
@@ -71,11 +74,13 @@
   width: 100%;
   height: 100%;
 }
+
 .bottomRightPixelArtParent,
 .bottomRightPixelArtParent:hover {
   display: block;
   max-width: none;
 }
+
 .bottomRightPixelArt,
 .bottomRightPixelArt:hover {
   display: flex;
@@ -87,20 +92,24 @@
   transform: rotate(0deg);
   max-width: 100%;
 }
+
 .bottomRightPixelArt {
   position: absolute;
   /* Anchored to bottom-right of the fixed viewport layer */
   bottom: 0;
   right: 0;
 }
+
 .bottomRightPixelArt:hover {
   justify-content: flex-start;
 }
+
 .bottomRightPixelArtChild {
   position: relative;
   overflow: hidden;
   flex-shrink: 0;
 }
+
 .bottomRightPixelArtChild,
 .bottomRightPixelArtChild:hover {
   background-color: var(--color-lightgoldenrodyellow-100);
@@ -109,6 +118,7 @@
   height: var(--height-60);
   gap: var(--gap-0);
 }
+
 .pixelRowBr1,
 .pixelRowBr1:hover {
   align-self: stretch;
@@ -121,14 +131,17 @@
   gap: var(--gap-10) var(--gap-0);
   transform: rotate(0deg);
 }
+
 .pixelRowBr1:hover {
   flex-direction: row;
 }
+
 .pixelRowBr1Child {
   position: relative;
   overflow: hidden;
   flex-shrink: 0;
 }
+
 .pixelRowBr1Child,
 .pixelRowBr1Child:hover {
   background-color: var(--color-lightgoldenrodyellow-200);
@@ -137,6 +150,7 @@
   height: var(--height-60);
   gap: var(--gap-0);
 }
+
 .pixelRowBr1Item,
 .pixelRowBr1Item:hover {
   background-color: var(--color-khaki-100);
@@ -145,12 +159,14 @@
   height: var(--height-60);
   gap: var(--gap-0);
 }
+
 .pixelRowBr1Item,
 .pixelRowBr2Child {
   position: relative;
   overflow: hidden;
   flex-shrink: 0;
 }
+
 .pixelRowBr2Child,
 .pixelRowBr2Child:hover {
   background-color: var(--color-yellowgreen-300);
@@ -159,6 +175,7 @@
   height: var(--height-60);
   gap: var(--gap-0);
 }
+
 .pixelRowBr2Item,
 .pixelRowBr2Item:hover {
   background-color: var(--color-yellowgreen-800);
@@ -167,12 +184,14 @@
   height: var(--height-60);
   gap: var(--gap-0);
 }
+
 .pixelRowBr2Inner,
 .pixelRowBr2Item {
   position: relative;
   overflow: hidden;
   flex-shrink: 0;
 }
+
 .pixelRowBr2Inner,
 .pixelRowBr2Inner:hover {
   background-color: var(--color-yellowgreen-200);
@@ -181,6 +200,7 @@
   height: var(--height-60);
   gap: var(--gap-0);
 }
+
 .pixelRowBr3,
 .pixelRowBr3:hover {
   align-self: stretch;
@@ -190,9 +210,11 @@
   align-content: center;
   gap: var(--gap-0);
 }
+
 .pixelRowBr3:hover {
   flex-direction: row;
 }
+
 .pixelRowBr3,
 .pixelRowBr3:hover,
 .pixelRowBr3Inner,
@@ -202,6 +224,7 @@
   height: auto;
   transform: rotate(0deg);
 }
+
 .pixelRowBr3Inner,
 .pixelRowBr3Inner:hover {
   gap: var(--gap-10) var(--gap-0);
@@ -209,18 +232,22 @@
   min-width: var(--min-w-60);
   max-width: 120px;
 }
+
 .pixelRowBr3Inner {
   flex: 1;
 }
+
 .pixelRowBr3Inner:hover {
   flex-direction: row;
   justify-content: flex-start;
 }
+
 .frameChild {
   position: relative;
   overflow: hidden;
   flex-shrink: 0;
 }
+
 .frameChild,
 .frameChild:hover {
   background-color: var(--color-lightgoldenrodyellow-300);
@@ -229,6 +256,7 @@
   height: var(--height-60);
   gap: var(--gap-0);
 }
+
 .pixelRowBr3Child,
 .pixelRowBr3Child:hover {
   background-color: var(--color-yellowgreen-100);
@@ -237,12 +265,14 @@
   height: var(--height-60);
   gap: var(--gap-0);
 }
+
 .pixelRowBr3Child,
 .pixelRowBr3Item {
   position: relative;
   overflow: hidden;
   flex-shrink: 0;
 }
+
 .pixelRowBr3Item,
 .pixelRowBr3Item:hover {
   background-color: var(--color-yellowgreen-700);
@@ -251,6 +281,7 @@
   height: var(--height-60);
   gap: var(--gap-0);
 }
+
 .frameDiv,
 .frameDiv:hover {
   background-color: var(--color-seagreen-500);
@@ -259,12 +290,14 @@
   height: var(--height-60);
   gap: var(--gap-0);
 }
+
 .frameDiv,
 .pixelRowBr3Child2 {
   position: relative;
   overflow: hidden;
   flex-shrink: 0;
 }
+
 .pixelRowBr3Child2,
 .pixelRowBr3Child2:hover {
   background-color: var(--color-seagreen-200);
@@ -273,6 +306,7 @@
   height: var(--height-60);
   gap: var(--gap-0);
 }
+
 .pixelRowBr4,
 .pixelRowBr4:hover {
   align-self: stretch;
@@ -285,14 +319,17 @@
   gap: var(--gap-10) var(--gap-0);
   transform: rotate(0deg);
 }
+
 .pixelRowBr4:hover {
   flex-direction: row;
 }
+
 .pixelRowBr4Child {
   position: relative;
   overflow: hidden;
   flex-shrink: 0;
 }
+
 .pixelRowBr4Child,
 .pixelRowBr4Child:hover {
   background-color: var(--color-khaki-300);
@@ -301,6 +338,7 @@
   height: var(--height-60);
   gap: var(--gap-0);
 }
+
 .pixelRowBr4Item,
 .pixelRowBr4Item:hover {
   background-color: var(--color-yellowgreen-600);
@@ -309,12 +347,14 @@
   height: var(--height-60);
   gap: var(--gap-0);
 }
+
 .pixelRowBr4Inner,
 .pixelRowBr4Item {
   position: relative;
   overflow: hidden;
   flex-shrink: 0;
 }
+
 .pixelRowBr4Inner,
 .pixelRowBr4Inner:hover {
   background-color: var(--color-lightgoldenrodyellow-400);
@@ -323,6 +363,7 @@
   height: var(--height-60);
   gap: var(--gap-0);
 }
+
 .pixelRowBr4Child2,
 .pixelRowBr4Child2:hover {
   background-color: var(--color-yellowgreen-400);
@@ -331,12 +372,14 @@
   height: var(--height-60);
   gap: var(--gap-0);
 }
+
 .pixelRowBr4Child2,
 .pixelRowBr4Child3 {
   position: relative;
   overflow: hidden;
   flex-shrink: 0;
 }
+
 .pixelRowBr4Child3,
 .pixelRowBr4Child3:hover {
   background-color: var(--color-khaki-200);
@@ -345,6 +388,7 @@
   height: var(--height-60);
   gap: var(--gap-0);
 }
+
 .pixelRowBr4Child4,
 .pixelRowBr4Child4:hover {
   background-color: var(--color-yellowgreen-1000);
@@ -353,12 +397,14 @@
   height: var(--height-60);
   gap: var(--gap-0);
 }
+
 .pixelRowBr4Child4,
 .pixelRowBr4Child6 {
   position: relative;
   overflow: hidden;
   flex-shrink: 0;
 }
+
 .pixelRowBr4Child6,
 .pixelRowBr4Child6:hover {
   background-color: var(--color-seagreen-400);
@@ -367,6 +413,7 @@
   height: var(--height-60);
   gap: var(--gap-0);
 }
+
 .pixelRowBr5,
 .pixelRowBr5:hover {
   align-self: stretch;
@@ -381,9 +428,11 @@
   height: auto;
   transform: rotate(0deg);
 }
+
 .pixelRowBr5:hover {
   flex-direction: row;
 }
+
 .pixelRowBr5Child,
 .pixelRowBr5Child:hover {
   background-color: var(--color-palegoldenrod);
@@ -393,12 +442,14 @@
   gap: var(--gap-0);
   max-width: var(--max-w-60);
 }
+
 .pixelRowBr5Child,
 .pixelRowBr5Item {
   flex: 1;
   position: relative;
   overflow: hidden;
 }
+
 .pixelRowBr5Item,
 .pixelRowBr5Item:hover {
   background-color: var(--color-yellowgreen-500);
@@ -408,6 +459,7 @@
   gap: var(--gap-0);
   max-width: var(--max-w-60);
 }
+
 .pixelRowBr5Inner,
 .pixelRowBr5Inner:hover {
   background-color: var(--color-yellowgreen-900);
@@ -417,12 +469,14 @@
   gap: var(--gap-0);
   max-width: var(--max-w-60);
 }
+
 .pixelRowBr5Child2,
 .pixelRowBr5Inner {
   flex: 1;
   position: relative;
   overflow: hidden;
 }
+
 .pixelRowBr5Child2,
 .pixelRowBr5Child2:hover {
   background-color: var(--color-yellowgreen-1100);
@@ -432,6 +486,7 @@
   gap: var(--gap-0);
   max-width: var(--max-w-60);
 }
+
 .pixelRowBr5Child3,
 .pixelRowBr5Child3:hover {
   background-color: var(--color-olivedrab-200);
@@ -441,12 +496,14 @@
   gap: var(--gap-0);
   max-width: var(--max-w-60);
 }
+
 .pixelRowBr5Child3,
 .pixelRowBr5Child4 {
   flex: 1;
   position: relative;
   overflow: hidden;
 }
+
 .pixelRowBr5Child4,
 .pixelRowBr5Child4:hover {
   background-color: var(--color-olivedrab-100);
@@ -456,6 +513,7 @@
   gap: var(--gap-0);
   max-width: var(--max-w-60);
 }
+
 .pixelRowBr5Child5,
 .pixelRowBr5Child5:hover {
   background-color: var(--color-olivedrab-300);
@@ -465,12 +523,14 @@
   gap: var(--gap-0);
   max-width: var(--max-w-60);
 }
+
 .pixelRowBr5Child5,
 .pixelRowBr5Child6 {
   flex: 1;
   position: relative;
   overflow: hidden;
 }
+
 .pixelRowBr5Child6,
 .pixelRowBr5Child6:hover {
   background-color: var(--color-seagreen-100);
@@ -480,6 +540,7 @@
   gap: var(--gap-0);
   max-width: var(--max-w-60);
 }
+
 .pixelRowBr5Child7,
 .pixelRowBr5Child7:hover {
   background-color: var(--color-seagreen-300);
@@ -489,12 +550,14 @@
   gap: var(--gap-0);
   max-width: var(--max-w-60);
 }
+
 .pixelRowBr5Child7,
 .pixelRowBr5Child8 {
   flex: 1;
   position: relative;
   overflow: hidden;
 }
+
 .pixelRowBr5Child8,
 .pixelRowBr5Child8:hover {
   background-color: var(--color-darkslategray-200);
@@ -504,6 +567,7 @@
   gap: var(--gap-0);
   max-width: var(--max-w-60);
 }
+
 .topLeftPixelArt,
 .topLeftPixelArt:hover {
   display: flex;
@@ -515,14 +579,17 @@
   transform: rotate(0deg);
   max-width: 100%;
 }
+
 .topLeftPixelArt {
   position: absolute;
   top: 0;
   left: 0;
 }
+
 .topLeftPixelArt:hover {
   justify-content: flex-start;
 }
+
 .pixelRow0Child,
 .pixelRow0Child:hover {
   background-color: var(--color-darkslategray-200);
@@ -533,12 +600,14 @@
   transform: rotate(180deg);
   max-width: var(--max-w-60);
 }
+
 .pixelRow0Child,
 .pixelRow0Item {
   flex: 1;
   position: relative;
   overflow: hidden;
 }
+
 .pixelRow0Item,
 .pixelRow0Item:hover {
   background-color: var(--color-seagreen-300);
@@ -549,6 +618,7 @@
   transform: rotate(180deg);
   max-width: var(--max-w-60);
 }
+
 .pixelRow0Inner,
 .pixelRow0Inner:hover {
   background-color: var(--color-seagreen-100);
@@ -559,12 +629,14 @@
   transform: rotate(180deg);
   max-width: var(--max-w-60);
 }
+
 .pixelRow0Child2,
 .pixelRow0Inner {
   flex: 1;
   position: relative;
   overflow: hidden;
 }
+
 .pixelRow0Child2,
 .pixelRow0Child2:hover {
   background-color: var(--color-olivedrab-300);
@@ -575,6 +647,7 @@
   transform: rotate(180deg);
   max-width: var(--max-w-60);
 }
+
 .pixelRow0Child3,
 .pixelRow0Child3:hover {
   background-color: var(--color-olivedrab-100);
@@ -585,12 +658,14 @@
   transform: rotate(180deg);
   max-width: var(--max-w-60);
 }
+
 .pixelRow0Child3,
 .pixelRow0Child4 {
   flex: 1;
   position: relative;
   overflow: hidden;
 }
+
 .pixelRow0Child4,
 .pixelRow0Child4:hover {
   background-color: var(--color-olivedrab-200);
@@ -601,6 +676,7 @@
   transform: rotate(180deg);
   max-width: var(--max-w-60);
 }
+
 .pixelRow0Child5,
 .pixelRow0Child5:hover {
   background-color: var(--color-yellowgreen-1100);
@@ -611,12 +687,14 @@
   transform: rotate(180deg);
   max-width: var(--max-w-60);
 }
+
 .pixelRow0Child5,
 .pixelRow0Child6 {
   flex: 1;
   position: relative;
   overflow: hidden;
 }
+
 .pixelRow0Child6,
 .pixelRow0Child6:hover {
   background-color: var(--color-yellowgreen-900);
@@ -627,6 +705,7 @@
   transform: rotate(180deg);
   max-width: var(--max-w-60);
 }
+
 .pixelRow0Child7,
 .pixelRow0Child7:hover {
   background-color: var(--color-yellowgreen-500);
@@ -637,12 +716,14 @@
   transform: rotate(180deg);
   max-width: var(--max-w-60);
 }
+
 .pixelRow0Child7,
 .pixelRow0Child8 {
   flex: 1;
   position: relative;
   overflow: hidden;
 }
+
 .pixelRow0Child8,
 .pixelRow0Child8:hover {
   background-color: var(--color-palegoldenrod);
@@ -653,6 +734,7 @@
   transform: rotate(180deg);
   max-width: var(--max-w-60);
 }
+
 .pixelRow1,
 .pixelRow1:hover {
   align-self: stretch;
@@ -664,10 +746,12 @@
   gap: var(--gap-10) var(--gap-0);
   transform: rotate(0deg);
 }
+
 .pixelRow1:hover {
   flex-direction: row;
   justify-content: flex-start;
 }
+
 .pixelRow1Child,
 .pixelRow1Child:hover {
   background-color: var(--color-seagreen-200);
@@ -677,12 +761,14 @@
   gap: var(--gap-0);
   transform: rotate(180deg);
 }
+
 .pixelRow1Child,
 .pixelRow1Item {
   position: relative;
   overflow: hidden;
   flex-shrink: 0;
 }
+
 .pixelRow1Item,
 .pixelRow1Item:hover {
   background-color: var(--color-seagreen-400);
@@ -692,6 +778,7 @@
   gap: var(--gap-0);
   transform: rotate(180deg);
 }
+
 .pixelRow1Child2,
 .pixelRow1Child2:hover {
   background-color: var(--color-yellowgreen-1000);
@@ -701,12 +788,14 @@
   gap: var(--gap-0);
   transform: rotate(180deg);
 }
+
 .pixelRow1Child2,
 .pixelRow1Child3 {
   position: relative;
   overflow: hidden;
   flex-shrink: 0;
 }
+
 .pixelRow1Child3,
 .pixelRow1Child3:hover {
   background-color: var(--color-khaki-200);
@@ -716,6 +805,7 @@
   gap: var(--gap-0);
   transform: rotate(180deg);
 }
+
 .pixelRow1Child4,
 .pixelRow1Child4:hover {
   background-color: var(--color-yellowgreen-400);
@@ -725,12 +815,14 @@
   gap: var(--gap-0);
   transform: rotate(180deg);
 }
+
 .pixelRow1Child4,
 .pixelRow1Child5 {
   position: relative;
   overflow: hidden;
   flex-shrink: 0;
 }
+
 .pixelRow1Child5,
 .pixelRow1Child5:hover {
   background-color: var(--color-lightgoldenrodyellow-400);
@@ -740,6 +832,7 @@
   gap: var(--gap-0);
   transform: rotate(180deg);
 }
+
 .pixelRow1Child6,
 .pixelRow1Child6:hover {
   background-color: var(--color-yellowgreen-600);
@@ -749,12 +842,14 @@
   gap: var(--gap-0);
   transform: rotate(180deg);
 }
+
 .pixelRow1Child6,
 .pixelRow1Child7 {
   position: relative;
   overflow: hidden;
   flex-shrink: 0;
 }
+
 .pixelRow1Child7,
 .pixelRow1Child7:hover {
   background-color: var(--color-khaki-300);
@@ -764,6 +859,7 @@
   gap: var(--gap-0);
   transform: rotate(180deg);
 }
+
 .pixelRow2,
 .pixelRow2:hover {
   align-self: stretch;
@@ -777,10 +873,12 @@
   height: auto;
   transform: rotate(0deg);
 }
+
 .pixelRow2:hover {
   flex-direction: row;
   justify-content: flex-start;
 }
+
 .pixelRow2Item,
 .pixelRow2Item:hover {
   background-color: var(--color-seagreen-500);
@@ -790,12 +888,14 @@
   gap: var(--gap-0);
   transform: rotate(180deg);
 }
+
 .pixelRow2Inner,
 .pixelRow2Item {
   position: relative;
   overflow: hidden;
   flex-shrink: 0;
 }
+
 .pixelRow2Inner,
 .pixelRow2Inner:hover {
   background-color: var(--color-yellowgreen-700);
@@ -805,6 +905,7 @@
   gap: var(--gap-0);
   transform: rotate(180deg);
 }
+
 .frameItem,
 .frameItem:hover {
   background-color: var(--color-yellowgreen-100);
@@ -814,12 +915,14 @@
   gap: var(--gap-0);
   transform: rotate(180deg);
 }
+
 .frameItem,
 .pixelRow2Child2 {
   position: relative;
   overflow: hidden;
   flex-shrink: 0;
 }
+
 .pixelRow2Child2,
 .pixelRow2Child2:hover {
   background-color: var(--color-lightgoldenrodyellow-300);
@@ -829,6 +932,7 @@
   gap: var(--gap-0);
   transform: rotate(180deg);
 }
+
 .pixelRow3,
 .pixelRow3:hover {
   align-self: stretch;
@@ -840,10 +944,12 @@
   gap: var(--gap-10) var(--gap-0);
   transform: rotate(0deg);
 }
+
 .pixelRow3:hover {
   flex-direction: row;
   justify-content: flex-start;
 }
+
 .pixelRow3Child,
 .pixelRow3Child:hover {
   background-color: var(--color-yellowgreen-200);
@@ -853,12 +959,14 @@
   gap: var(--gap-0);
   transform: rotate(180deg);
 }
+
 .pixelRow3Child,
 .pixelRow3Item {
   position: relative;
   overflow: hidden;
   flex-shrink: 0;
 }
+
 .pixelRow3Item,
 .pixelRow3Item:hover {
   background-color: var(--color-yellowgreen-800);
@@ -868,6 +976,7 @@
   gap: var(--gap-0);
   transform: rotate(180deg);
 }
+
 .pixelRow3Inner,
 .pixelRow3Inner:hover {
   background-color: var(--color-yellowgreen-300);
@@ -877,12 +986,14 @@
   gap: var(--gap-0);
   transform: rotate(180deg);
 }
+
 .pixelRow3Inner,
 .pixelRow4Child {
   position: relative;
   overflow: hidden;
   flex-shrink: 0;
 }
+
 .pixelRow4Child,
 .pixelRow4Child:hover {
   background-color: var(--color-khaki-100);
@@ -892,6 +1003,7 @@
   gap: var(--gap-0);
   transform: rotate(180deg);
 }
+
 .pixelRow4Item,
 .pixelRow4Item:hover {
   background-color: var(--color-lightgoldenrodyellow-200);
@@ -901,12 +1013,14 @@
   gap: var(--gap-0);
   transform: rotate(180deg);
 }
+
 .pixelRow4Item,
 .topLeftPixelArtChild {
   position: relative;
   overflow: hidden;
   flex-shrink: 0;
 }
+
 .topLeftPixelArtChild,
 .topLeftPixelArtChild:hover {
   background-color: var(--color-lightgoldenrodyellow-100);
@@ -916,6 +1030,7 @@
   gap: var(--gap-0);
   transform: rotate(180deg);
 }
+
 @media screen and (max-width: 800px) {
   .learn {
     gap: 17px;
@@ -923,21 +1038,25 @@
     box-sizing: border-box;
     align-items: center;
   }
+
   /* learnInner stays fixed — no changes needed for mobile */
   .heroSection {
     min-height: 100vh;
     min-height: 100dvh;
   }
+
   .bottomRightPixelArtParent {
     /* Fills the fixed viewport layer on mobile too */
     height: 100%;
   }
+
   .topLeftPixelArt,
   .bottomRightPixelArt {
     opacity: 0.55;
     transform: scale(0.72);
     transform-origin: top left;
   }
+
   .bottomRightPixelArt {
     top: auto;
     right: -230px;
@@ -945,37 +1064,46 @@
     left: auto;
     transform-origin: bottom right;
   }
+
   .pixelRow1,
   .pixelRowBr4 {
     flex-wrap: wrap;
     justify-content: center;
   }
 }
+
 @media screen and (max-width: 450px) {
   .learn {
     padding: 10px;
   }
+
   .heroSection {
     min-height: 100vh;
     min-height: 100dvh;
   }
+
   .bottomRightPixelArtParent {
     height: 100%;
   }
+
   .topLeftPixelArt,
   .bottomRightPixelArt {
     transform: scale(0.56);
   }
+
   .bottomRightPixelArt {
     right: -265px;
     bottom: -130px;
   }
+
   .pixelRowBr1 {
     flex-wrap: wrap;
   }
+
   .pixelRow2 {
     justify-content: center;
   }
+
   .pixelRow3 {
     flex-wrap: wrap;
   }
