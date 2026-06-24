@@ -40,11 +40,7 @@
 .frameInner:hover,
 .frameItem,
 .frameItem:hover {
-  background-color: var(--Assets-Colours-Primary-text);
-  display: block;
-  width: var(--width-123);
-  height: var(--height-123);
-  gap: var(--gap-0);
+  display: none;
 }
 .frameChild2,
 .frameChild3,
@@ -130,45 +126,37 @@
 .frameDiv,
 .frameGroup {
   position: absolute;
-  overflow: hidden;
 }
 .frameGroup {
   top: 129px;
   left: 129px;
+  overflow: visible;
 }
 .frameGroup,
 .frameGroup:hover {
   display: block;
-  width: var(--width-123);
-  height: var(--height-123);
+  width: auto;
+  height: auto;
   gap: var(--gap-0);
 }
 .frameDiv {
-  top: 0;
-  right: 3px;
-  left: 0;
-  flex-shrink: 0;
+  display: none;
 }
 .frameDiv,
 .frameDiv:hover {
-  background-color: var(--Assets-Colours-Primary-text);
-  display: block;
-  width: 120px;
-  height: var(--height-120);
-  gap: var(--gap-0);
+  display: none;
 }
 .chatgptImageJun19202609 {
   position: absolute;
-  top: calc(50% - 230.5px);
-  left: calc(50% - 260.5px);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  flex-shrink: 0;
 }
 .chatgptImageJun19202609,
 .chatgptImageJun19202609:hover {
   display: block;
-  width: 686px;
-  height: 590px;
 }
 .frameChild9 {
   position: absolute;
@@ -182,11 +170,7 @@
 .frameChild11:hover,
 .frameChild9,
 .frameChild9:hover {
-  background-color: var(--Assets-Colours-Primary-text);
-  display: block;
-  width: var(--width-123);
-  height: var(--height-123);
-  gap: var(--gap-0);
+  display: none;
 }
 .frameChild10,
 .frameChild11 {
@@ -524,14 +508,7 @@
   .frameDiv {
     display: none;
   }
-  .chatgptImageJun19202609,
-  .chatgptImageJun19202609:hover {
-    top: 0;
-    left: 50%;
-    width: auto;
-    height: 100%;
-    transform: translateX(-50%);
-  }
+
 }
 @media screen and (max-width: 450px) {
   .frameParent,

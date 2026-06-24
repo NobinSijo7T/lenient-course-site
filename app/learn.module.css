@@ -67,7 +67,7 @@
 .bottomRightPixelArt {
   position: absolute;
   top: 664px;
-  left: 840px;
+  right: 0;
 }
 .bottomRightPixelArt:hover {
   justify-content: flex-start;

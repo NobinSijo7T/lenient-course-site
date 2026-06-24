@@ -1,6 +1,7 @@
 import "./global.css";
 
 import { ReactNode } from "react";
+import SmoothScrolling from "../components/smooth-scrolling";
 
 export const metadata = {
   title: `Lenient Tree`,
@@ -29,7 +30,9 @@ export default function RootLayout({
         <link rel="apple-touch-icon" href="/favicon/apple-touch-icon.png" />
         <link rel="manifest" href="/favicon/site.webmanifest" />
       </head>
-      <body suppressHydrationWarning>{children}</body>
+      <body suppressHydrationWarning>
+        <SmoothScrolling>{children}</SmoothScrolling>
+      </body>
     </html>
   );
 }
