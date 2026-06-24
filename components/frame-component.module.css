@@ -23,15 +23,6 @@
   }
 }
 
-@keyframes pulseGlow {
-  0%, 100% {
-    filter: drop-shadow(0 0 10px rgba(154, 230, 0, 0.3));
-  }
-  50% {
-    filter: drop-shadow(0 0 20px rgba(154, 230, 0, 0.6));
-  }
-}
-
 .chatgptImageJun19202609 {
   position: absolute;
   top: 0;
@@ -45,8 +36,6 @@
 
 .chatgptImageJun19202609:hover {
   transform: scale(1.05) rotate(2deg) !important;
-  filter: drop-shadow(0 0 25px rgba(154, 230, 0, 0.8));
-  animation: pulseGlow 1.5s ease-in-out infinite;
 }
 
 .chatgptImageJun19202609,

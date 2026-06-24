@@ -1,5 +1,4 @@
 import type { NextPage } from "next";
-import SquareField from "./SquareField";
 import styles from "./frame-component2.module.css";
 
 export type FrameComponent2Type = {
@@ -9,7 +8,6 @@ export type FrameComponent2Type = {
 const FrameComponent2: NextPage<FrameComponent2Type> = ({ className = "" }) => {
   return (
     <section className={[styles.learnInner, className].join(" ")}>
-      <SquareField />
       <div className={styles.frameParent}>
         <button className={styles.speakerSpotlightWrapper}>
           <b className={styles.speakerSpotlight}>Speaker Spotlight</b>

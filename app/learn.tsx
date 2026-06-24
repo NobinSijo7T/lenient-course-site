@@ -1,6 +1,5 @@
 import type { NextPage } from "next";
 import TB from "../components/t-b";
-import SquareField from "../components/SquareField";
 import ScrollStory from "../components/ScrollStory";
 import FrameComponent from "../components/frame-component";
 import FrameComponent1 from "../components/frame-component1";
@@ -13,14 +12,6 @@ const Learn: NextPage = () => {
     <div className={styles.learn}>
       <main className={styles.learnInner}>
         <div className={styles.bottomRightPixelArtParent}>
-          <SquareField
-            squareSize={4}
-            squareSpacing={18}
-            cursorRadius={400}
-            bulgeStrength={50}
-            gradientFrom="rgba(154, 230, 0, 0.8)"
-            gradientTo="rgba(100, 180, 50, 0.7)"
-          />
           <section className={styles.bottomRightPixelArt}>
             <div className={styles.bottomRightPixelArtChild} />
             <div className={styles.pixelRowBr1}>
