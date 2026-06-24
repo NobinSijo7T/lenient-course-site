@@ -1,0 +1,278 @@
+.frameParent,
+.learnInner {
+  flex-direction: column;
+  flex-shrink: 0;
+}
+.learnInner,
+.learnInner:hover {
+  background-color: var(--color-gainsboro);
+  display: flex;
+  align-self: stretch;
+  width: 100%;
+  height: auto;
+  gap: var(--gap-0) var(--gap-10);
+  align-items: center;
+  justify-content: center;
+  padding: var(--padding-80) var(--padding-30);
+  box-sizing: border-box;
+  max-width: 100%;
+}
+.learnInner {
+  overflow: hidden;
+  z-index: 4;
+}
+.learnInner:hover {
+  flex-direction: column;
+}
+.frameParent {
+  gap: var(--gap-80) var(--gap-10);
+  max-width: 1286px;
+}
+.frameParent,
+.frameParent:hover,
+.speakerSpotlightWrapper,
+.speakerSpotlightWrapper:hover {
+  display: flex;
+  width: 100%;
+  height: auto;
+  align-items: center;
+}
+.frameParent:hover {
+  flex-direction: column;
+  gap: var(--gap-80) var(--gap-10);
+  justify-content: flex-start;
+  max-width: 1286px;
+  flex-shrink: 0;
+}
+.speakerSpotlightWrapper,
+.speakerSpotlightWrapper:hover {
+  gap: var(--gap-10) var(--gap-0);
+  justify-content: center;
+  border-radius: 34px;
+  max-width: 451px;
+  min-height: var(--min-h-64);
+}
+.speakerSpotlightWrapper {
+  cursor: pointer;
+  padding: 0;
+}
+.speakerSpotlightWrapper:hover {
+  background-color: var(--color-darkslategray-300);
+  flex-direction: row;
+  border: var(--border-2);
+  box-sizing: border-box;
+}
+.speakerSpotlightWrapper,
+.speakerSpotlightWrapper:active {
+  background-color: var(--color-teal);
+  border: 2px solid var(--color-dimgray-100);
+  box-sizing: border-box;
+}
+.speakerSpotlight {
+  position: relative;
+}
+.speakerSpotlight,
+.speakerSpotlight:hover {
+  font-weight: 700;
+  font-family: var(--font-urbanist);
+  font-size: var(--Heading-2);
+  letter-spacing: -0.24px;
+  line-height: 87.67%;
+  text-align: center;
+  color: var(--Assets-Colours-Primary-text);
+  display: block;
+  flex: 1;
+  height: auto;
+  max-width: 100%;
+}
+.frameWrapper {
+  flex-direction: column;
+  align-items: flex-start;
+  padding: var(--padding-10);
+  gap: var(--gap-0) var(--gap-10);
+}
+.frameGroup,
+.frameGroup:hover,
+.frameWrapper,
+.frameWrapper:hover {
+  align-self: stretch;
+  display: flex;
+  box-sizing: border-box;
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+}
+.frameWrapper:hover {
+  flex-direction: column;
+  gap: var(--gap-0) var(--gap-10);
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-10);
+}
+.frameGroup,
+.frameGroup:hover {
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-content: center;
+  padding: var(--padding-0) var(--padding-2) var(--padding-0) var(--padding-0);
+  gap: 31.9px;
+}
+.frameGroup:hover {
+  flex-direction: row;
+}
+.frameContainer {
+  height: var(--height-400_7);
+  border-radius: var(--br-12);
+  background-color: var(--color-silver);
+  overflow: hidden;
+  display: flex;
+  align-items: flex-start;
+  min-width: var(--min-w-380);
+  max-height: var(--max-h-400_7);
+  flex-shrink: 0;
+  text-align: left;
+  font-size: var(--Heading-5);
+  color: var(--Assets-Colours-Primary-text);
+  font-family: var(--font-urbanist);
+}
+.frame,
+.frameContainer,
+.frameContainer:hover {
+  flex: 1;
+  justify-content: flex-end;
+  max-width: 100%;
+  gap: var(--gap-10) var(--gap-0);
+}
+.frameContainer:hover {
+  background-color: var(--color-silver);
+  display: flex;
+  height: var(--height-400_7);
+  flex-direction: row;
+  align-items: flex-start;
+  border-radius: var(--br-12);
+  min-width: var(--min-w-380);
+  max-height: var(--max-h-400_7);
+}
+.frame {
+  padding: var(--padding-0) var(--padding-0) var(--padding-8_3) var(--padding-8);
+  background-image: url(/Frame@3x.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  transform: rotate(0deg);
+  flex-shrink: 0;
+}
+.frame,
+.frame:hover,
+.rayPoderParent,
+.rayPoderParent:hover {
+  display: flex;
+  height: auto;
+  align-items: flex-start;
+  box-sizing: border-box;
+}
+.frame:hover {
+  flex: 1;
+  flex-direction: row;
+  gap: var(--gap-10) var(--gap-0);
+  justify-content: flex-end;
+  transform: rotate(0deg);
+  padding: var(--padding-0) var(--padding-0) var(--padding-8_3) var(--padding-8);
+  max-width: 100%;
+}
+.rayPoderParent,
+.rayPoderParent:hover {
+  background: var(--gradient-1);
+  width: 100%;
+  flex-direction: column;
+  gap: var(--gap-2) var(--gap-10);
+  border-radius: var(--br-12);
+  padding: var(--padding-342) var(--padding-19) var(--padding-8_7);
+  max-width: var(--max-w-400_7);
+}
+.rayPoderParent {
+  flex: 1;
+  overflow: hidden;
+}
+.rayPoderParent:hover {
+  justify-content: flex-start;
+}
+.rayPoder {
+  margin: 0;
+  position: relative;
+  font-size: inherit;
+  font-weight: 700;
+  font-family: inherit;
+}
+.founderOne,
+.founderOne:hover,
+.rayPoder,
+.rayPoder:hover {
+  display: block;
+  width: auto;
+  align-self: unset;
+  height: auto;
+}
+.rayPoder:hover {
+  font-weight: 700;
+  font-family: var(--font-urbanist);
+  font-size: var(--Heading-5);
+  text-align: left;
+  color: var(--Assets-Colours-Primary-text);
+}
+.founderOne,
+.founderOne:hover {
+  font-weight: 500;
+}
+.founderOne {
+  margin: 0;
+  position: relative;
+  font-size: inherit;
+  font-family: inherit;
+}
+.founderOne:hover {
+  font-family: var(--font-urbanist);
+  font-size: var(--Heading-5);
+  text-align: left;
+  color: var(--Assets-Colours-Primary-text);
+}
+@media screen and (max-width: 1350px) {
+  .frameParent {
+    max-width: 100%;
+  }
+}
+@media screen and (max-width: 800px) {
+  .learnInner {
+    padding-top: 52px;
+    padding-bottom: 52px;
+    box-sizing: border-box;
+  }
+  .frameParent {
+    gap: var(--gap-40);
+  }
+  .frameGroup {
+    gap: var(--gap-16);
+  }
+}
+@media screen and (max-width: 450px) {
+  .frameParent {
+    gap: var(--gap-20);
+  }
+  .speakerSpotlightWrapper {
+    max-width: 100%;
+  }
+  .frameContainer {
+    min-width: 100%;
+  }
+  .rayPoderParent {
+    padding-top: var(--padding-222);
+    padding-bottom: var(--padding-20);
+    box-sizing: border-box;
+    max-width: 100%;
+  }
+  .founderOne,
+  .rayPoder {
+    font-size: var(--fs-16);
+  }
+}

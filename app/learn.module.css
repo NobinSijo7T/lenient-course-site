@@ -1,0 +1,956 @@
+.learn {
+  width: 100%;
+  min-width: 0;
+  position: relative;
+  background-color: var(--color-gainsboro);
+  overflow-x: hidden;
+  overflow-y: auto;
+  isolation: isolate;
+  gap: 34px var(--gap-10);
+  line-height: normal;
+  letter-spacing: normal;
+}
+.learn,
+.learn:hover,
+.learnInner,
+.learnInner:hover {
+  display: flex;
+  height: auto;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.learn:hover {
+  background-color: var(--color-gainsboro);
+  width: 100%;
+  gap: 34px var(--gap-10);
+  justify-content: flex-start;
+  line-height: normal;
+  letter-spacing: normal;
+}
+.learnInner,
+.learnInner:hover {
+  align-self: stretch;
+  width: 100%;
+  gap: var(--gap-0) var(--gap-10);
+  max-width: 100%;
+}
+.learnInner {
+  overflow: hidden;
+  flex-shrink: 0;
+  opacity: 0.94;
+  z-index: 0;
+}
+.learnInner:hover {
+  justify-content: flex-start;
+}
+.bottomRightPixelArtParent {
+  position: relative;
+}
+.bottomRightPixelArtParent,
+.bottomRightPixelArtParent:hover {
+  display: block;
+  width: 100%;
+  height: 1024px;
+  max-width: none;
+}
+.bottomRightPixelArt,
+.bottomRightPixelArt:hover {
+  display: flex;
+  width: 600px;
+  height: auto;
+  flex-direction: column;
+  gap: var(--gap-0) var(--gap-10);
+  align-items: flex-end;
+  transform: rotate(0deg);
+  max-width: 100%;
+}
+.bottomRightPixelArt {
+  position: absolute;
+  top: 664px;
+  left: 840px;
+}
+.bottomRightPixelArt:hover {
+  justify-content: flex-start;
+}
+.bottomRightPixelArtChild {
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.bottomRightPixelArtChild,
+.bottomRightPixelArtChild:hover {
+  background-color: var(--color-lightgoldenrodyellow-100);
+  display: block;
+  width: var(--width-60);
+  height: var(--height-60);
+  gap: var(--gap-0);
+}
+.pixelRowBr1,
+.pixelRowBr1:hover {
+  align-self: stretch;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  row-gap: var(--gap-20);
+  width: 100%;
+  height: auto;
+  gap: var(--gap-10) var(--gap-0);
+  transform: rotate(0deg);
+}
+.pixelRowBr1:hover {
+  flex-direction: row;
+}
+.pixelRowBr1Child {
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.pixelRowBr1Child,
+.pixelRowBr1Child:hover {
+  background-color: var(--color-lightgoldenrodyellow-200);
+  display: block;
+  width: var(--width-60);
+  height: var(--height-60);
+  gap: var(--gap-0);
+}
+.pixelRowBr1Item,
+.pixelRowBr1Item:hover {
+  background-color: var(--color-khaki-100);
+  display: block;
+  width: var(--width-60);
+  height: var(--height-60);
+  gap: var(--gap-0);
+}
+.pixelRowBr1Item,
+.pixelRowBr2Child {
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.pixelRowBr2Child,
+.pixelRowBr2Child:hover {
+  background-color: var(--color-yellowgreen-300);
+  display: block;
+  width: var(--width-60);
+  height: var(--height-60);
+  gap: var(--gap-0);
+}
+.pixelRowBr2Item,
+.pixelRowBr2Item:hover {
+  background-color: var(--color-yellowgreen-800);
+  display: block;
+  width: var(--width-60);
+  height: var(--height-60);
+  gap: var(--gap-0);
+}
+.pixelRowBr2Inner,
+.pixelRowBr2Item {
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.pixelRowBr2Inner,
+.pixelRowBr2Inner:hover {
+  background-color: var(--color-yellowgreen-200);
+  display: block;
+  width: var(--width-60);
+  height: var(--height-60);
+  gap: var(--gap-0);
+}
+.pixelRowBr3,
+.pixelRowBr3:hover {
+  align-self: stretch;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  align-content: center;
+  gap: var(--gap-0);
+}
+.pixelRowBr3:hover {
+  flex-direction: row;
+}
+.pixelRowBr3,
+.pixelRowBr3:hover,
+.pixelRowBr3Inner,
+.pixelRowBr3Inner:hover {
+  display: flex;
+  width: 100%;
+  height: auto;
+  transform: rotate(0deg);
+}
+.pixelRowBr3Inner,
+.pixelRowBr3Inner:hover {
+  gap: var(--gap-10) var(--gap-0);
+  align-items: flex-start;
+  min-width: var(--min-w-60);
+  max-width: 120px;
+}
+.pixelRowBr3Inner {
+  flex: 1;
+}
+.pixelRowBr3Inner:hover {
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.frameChild {
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.frameChild,
+.frameChild:hover {
+  background-color: var(--color-lightgoldenrodyellow-300);
+  display: block;
+  width: var(--width-60);
+  height: var(--height-60);
+  gap: var(--gap-0);
+}
+.pixelRowBr3Child,
+.pixelRowBr3Child:hover {
+  background-color: var(--color-yellowgreen-100);
+  display: block;
+  width: var(--width-60);
+  height: var(--height-60);
+  gap: var(--gap-0);
+}
+.pixelRowBr3Child,
+.pixelRowBr3Item {
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.pixelRowBr3Item,
+.pixelRowBr3Item:hover {
+  background-color: var(--color-yellowgreen-700);
+  display: block;
+  width: var(--width-60);
+  height: var(--height-60);
+  gap: var(--gap-0);
+}
+.frameDiv,
+.frameDiv:hover {
+  background-color: var(--color-seagreen-500);
+  display: block;
+  width: var(--width-60);
+  height: var(--height-60);
+  gap: var(--gap-0);
+}
+.frameDiv,
+.pixelRowBr3Child2 {
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.pixelRowBr3Child2,
+.pixelRowBr3Child2:hover {
+  background-color: var(--color-seagreen-200);
+  display: block;
+  width: var(--width-60);
+  height: var(--height-60);
+  gap: var(--gap-0);
+}
+.pixelRowBr4,
+.pixelRowBr4:hover {
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  row-gap: var(--gap-20);
+  width: 100%;
+  height: auto;
+  gap: var(--gap-10) var(--gap-0);
+  transform: rotate(0deg);
+}
+.pixelRowBr4:hover {
+  flex-direction: row;
+}
+.pixelRowBr4Child {
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.pixelRowBr4Child,
+.pixelRowBr4Child:hover {
+  background-color: var(--color-khaki-300);
+  display: block;
+  width: var(--width-60);
+  height: var(--height-60);
+  gap: var(--gap-0);
+}
+.pixelRowBr4Item,
+.pixelRowBr4Item:hover {
+  background-color: var(--color-yellowgreen-600);
+  display: block;
+  width: var(--width-60);
+  height: var(--height-60);
+  gap: var(--gap-0);
+}
+.pixelRowBr4Inner,
+.pixelRowBr4Item {
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.pixelRowBr4Inner,
+.pixelRowBr4Inner:hover {
+  background-color: var(--color-lightgoldenrodyellow-400);
+  display: block;
+  width: var(--width-60);
+  height: var(--height-60);
+  gap: var(--gap-0);
+}
+.pixelRowBr4Child2,
+.pixelRowBr4Child2:hover {
+  background-color: var(--color-yellowgreen-400);
+  display: block;
+  width: var(--width-60);
+  height: var(--height-60);
+  gap: var(--gap-0);
+}
+.pixelRowBr4Child2,
+.pixelRowBr4Child3 {
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.pixelRowBr4Child3,
+.pixelRowBr4Child3:hover {
+  background-color: var(--color-khaki-200);
+  display: block;
+  width: var(--width-60);
+  height: var(--height-60);
+  gap: var(--gap-0);
+}
+.pixelRowBr4Child4,
+.pixelRowBr4Child4:hover {
+  background-color: var(--color-yellowgreen-1000);
+  display: block;
+  width: var(--width-60);
+  height: var(--height-60);
+  gap: var(--gap-0);
+}
+.pixelRowBr4Child4,
+.pixelRowBr4Child6 {
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.pixelRowBr4Child6,
+.pixelRowBr4Child6:hover {
+  background-color: var(--color-seagreen-400);
+  display: block;
+  width: var(--width-60);
+  height: var(--height-60);
+  gap: var(--gap-0);
+}
+.pixelRowBr5,
+.pixelRowBr5:hover {
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-content: center;
+  gap: var(--gap-10) var(--gap-0);
+  row-gap: var(--gap-20);
+  width: 100%;
+  height: auto;
+  transform: rotate(0deg);
+}
+.pixelRowBr5:hover {
+  flex-direction: row;
+}
+.pixelRowBr5Child,
+.pixelRowBr5Child:hover {
+  background-color: var(--color-palegoldenrod);
+  display: block;
+  width: 100%;
+  height: var(--height-60);
+  gap: var(--gap-0);
+  max-width: var(--max-w-60);
+}
+.pixelRowBr5Child,
+.pixelRowBr5Item {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+}
+.pixelRowBr5Item,
+.pixelRowBr5Item:hover {
+  background-color: var(--color-yellowgreen-500);
+  display: block;
+  width: 100%;
+  height: var(--height-60);
+  gap: var(--gap-0);
+  max-width: var(--max-w-60);
+}
+.pixelRowBr5Inner,
+.pixelRowBr5Inner:hover {
+  background-color: var(--color-yellowgreen-900);
+  display: block;
+  width: 100%;
+  height: var(--height-60);
+  gap: var(--gap-0);
+  max-width: var(--max-w-60);
+}
+.pixelRowBr5Child2,
+.pixelRowBr5Inner {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+}
+.pixelRowBr5Child2,
+.pixelRowBr5Child2:hover {
+  background-color: var(--color-yellowgreen-1100);
+  display: block;
+  width: 100%;
+  height: var(--height-60);
+  gap: var(--gap-0);
+  max-width: var(--max-w-60);
+}
+.pixelRowBr5Child3,
+.pixelRowBr5Child3:hover {
+  background-color: var(--color-olivedrab-200);
+  display: block;
+  width: 100%;
+  height: var(--height-60);
+  gap: var(--gap-0);
+  max-width: var(--max-w-60);
+}
+.pixelRowBr5Child3,
+.pixelRowBr5Child4 {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+}
+.pixelRowBr5Child4,
+.pixelRowBr5Child4:hover {
+  background-color: var(--color-olivedrab-100);
+  display: block;
+  width: 100%;
+  height: var(--height-60);
+  gap: var(--gap-0);
+  max-width: var(--max-w-60);
+}
+.pixelRowBr5Child5,
+.pixelRowBr5Child5:hover {
+  background-color: var(--color-olivedrab-300);
+  display: block;
+  width: 100%;
+  height: var(--height-60);
+  gap: var(--gap-0);
+  max-width: var(--max-w-60);
+}
+.pixelRowBr5Child5,
+.pixelRowBr5Child6 {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+}
+.pixelRowBr5Child6,
+.pixelRowBr5Child6:hover {
+  background-color: var(--color-seagreen-100);
+  display: block;
+  width: 100%;
+  height: var(--height-60);
+  gap: var(--gap-0);
+  max-width: var(--max-w-60);
+}
+.pixelRowBr5Child7,
+.pixelRowBr5Child7:hover {
+  background-color: var(--color-seagreen-300);
+  display: block;
+  width: 100%;
+  height: var(--height-60);
+  gap: var(--gap-0);
+  max-width: var(--max-w-60);
+}
+.pixelRowBr5Child7,
+.pixelRowBr5Child8 {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+}
+.pixelRowBr5Child8,
+.pixelRowBr5Child8:hover {
+  background-color: var(--color-darkslategray-200);
+  display: block;
+  width: 100%;
+  height: var(--height-60);
+  gap: var(--gap-0);
+  max-width: var(--max-w-60);
+}
+.topLeftPixelArt,
+.topLeftPixelArt:hover {
+  display: flex;
+  width: 600px;
+  height: auto;
+  flex-direction: column;
+  gap: var(--gap-0) var(--gap-10);
+  align-items: flex-start;
+  transform: rotate(0deg);
+  max-width: 100%;
+}
+.topLeftPixelArt {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.topLeftPixelArt:hover {
+  justify-content: flex-start;
+}
+.pixelRow0Child,
+.pixelRow0Child:hover {
+  background-color: var(--color-darkslategray-200);
+  display: block;
+  width: 100%;
+  height: var(--height-60);
+  gap: var(--gap-0);
+  transform: rotate(180deg);
+  max-width: var(--max-w-60);
+}
+.pixelRow0Child,
+.pixelRow0Item {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+}
+.pixelRow0Item,
+.pixelRow0Item:hover {
+  background-color: var(--color-seagreen-300);
+  display: block;
+  width: 100%;
+  height: var(--height-60);
+  gap: var(--gap-0);
+  transform: rotate(180deg);
+  max-width: var(--max-w-60);
+}
+.pixelRow0Inner,
+.pixelRow0Inner:hover {
+  background-color: var(--color-seagreen-100);
+  display: block;
+  width: 100%;
+  height: var(--height-60);
+  gap: var(--gap-0);
+  transform: rotate(180deg);
+  max-width: var(--max-w-60);
+}
+.pixelRow0Child2,
+.pixelRow0Inner {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+}
+.pixelRow0Child2,
+.pixelRow0Child2:hover {
+  background-color: var(--color-olivedrab-300);
+  display: block;
+  width: 100%;
+  height: var(--height-60);
+  gap: var(--gap-0);
+  transform: rotate(180deg);
+  max-width: var(--max-w-60);
+}
+.pixelRow0Child3,
+.pixelRow0Child3:hover {
+  background-color: var(--color-olivedrab-100);
+  display: block;
+  width: 100%;
+  height: var(--height-60);
+  gap: var(--gap-0);
+  transform: rotate(180deg);
+  max-width: var(--max-w-60);
+}
+.pixelRow0Child3,
+.pixelRow0Child4 {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+}
+.pixelRow0Child4,
+.pixelRow0Child4:hover {
+  background-color: var(--color-olivedrab-200);
+  display: block;
+  width: 100%;
+  height: var(--height-60);
+  gap: var(--gap-0);
+  transform: rotate(180deg);
+  max-width: var(--max-w-60);
+}
+.pixelRow0Child5,
+.pixelRow0Child5:hover {
+  background-color: var(--color-yellowgreen-1100);
+  display: block;
+  width: 100%;
+  height: var(--height-60);
+  gap: var(--gap-0);
+  transform: rotate(180deg);
+  max-width: var(--max-w-60);
+}
+.pixelRow0Child5,
+.pixelRow0Child6 {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+}
+.pixelRow0Child6,
+.pixelRow0Child6:hover {
+  background-color: var(--color-yellowgreen-900);
+  display: block;
+  width: 100%;
+  height: var(--height-60);
+  gap: var(--gap-0);
+  transform: rotate(180deg);
+  max-width: var(--max-w-60);
+}
+.pixelRow0Child7,
+.pixelRow0Child7:hover {
+  background-color: var(--color-yellowgreen-500);
+  display: block;
+  width: 100%;
+  height: var(--height-60);
+  gap: var(--gap-0);
+  transform: rotate(180deg);
+  max-width: var(--max-w-60);
+}
+.pixelRow0Child7,
+.pixelRow0Child8 {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+}
+.pixelRow0Child8,
+.pixelRow0Child8:hover {
+  background-color: var(--color-palegoldenrod);
+  display: block;
+  width: 100%;
+  height: var(--height-60);
+  gap: var(--gap-0);
+  transform: rotate(180deg);
+  max-width: var(--max-w-60);
+}
+.pixelRow1,
+.pixelRow1:hover {
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  row-gap: var(--gap-20);
+  width: 100%;
+  height: auto;
+  gap: var(--gap-10) var(--gap-0);
+  transform: rotate(0deg);
+}
+.pixelRow1:hover {
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.pixelRow1Child,
+.pixelRow1Child:hover {
+  background-color: var(--color-seagreen-200);
+  display: block;
+  width: var(--width-60);
+  height: var(--height-60);
+  gap: var(--gap-0);
+  transform: rotate(180deg);
+}
+.pixelRow1Child,
+.pixelRow1Item {
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.pixelRow1Item,
+.pixelRow1Item:hover {
+  background-color: var(--color-seagreen-400);
+  display: block;
+  width: var(--width-60);
+  height: var(--height-60);
+  gap: var(--gap-0);
+  transform: rotate(180deg);
+}
+.pixelRow1Child2,
+.pixelRow1Child2:hover {
+  background-color: var(--color-yellowgreen-1000);
+  display: block;
+  width: var(--width-60);
+  height: var(--height-60);
+  gap: var(--gap-0);
+  transform: rotate(180deg);
+}
+.pixelRow1Child2,
+.pixelRow1Child3 {
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.pixelRow1Child3,
+.pixelRow1Child3:hover {
+  background-color: var(--color-khaki-200);
+  display: block;
+  width: var(--width-60);
+  height: var(--height-60);
+  gap: var(--gap-0);
+  transform: rotate(180deg);
+}
+.pixelRow1Child4,
+.pixelRow1Child4:hover {
+  background-color: var(--color-yellowgreen-400);
+  display: block;
+  width: var(--width-60);
+  height: var(--height-60);
+  gap: var(--gap-0);
+  transform: rotate(180deg);
+}
+.pixelRow1Child4,
+.pixelRow1Child5 {
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.pixelRow1Child5,
+.pixelRow1Child5:hover {
+  background-color: var(--color-lightgoldenrodyellow-400);
+  display: block;
+  width: var(--width-60);
+  height: var(--height-60);
+  gap: var(--gap-0);
+  transform: rotate(180deg);
+}
+.pixelRow1Child6,
+.pixelRow1Child6:hover {
+  background-color: var(--color-yellowgreen-600);
+  display: block;
+  width: var(--width-60);
+  height: var(--height-60);
+  gap: var(--gap-0);
+  transform: rotate(180deg);
+}
+.pixelRow1Child6,
+.pixelRow1Child7 {
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.pixelRow1Child7,
+.pixelRow1Child7:hover {
+  background-color: var(--color-khaki-300);
+  display: block;
+  width: var(--width-60);
+  height: var(--height-60);
+  gap: var(--gap-0);
+  transform: rotate(180deg);
+}
+.pixelRow2,
+.pixelRow2:hover {
+  align-self: stretch;
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  gap: var(--gap-10) var(--gap-0);
+  row-gap: var(--gap-20);
+  width: 100%;
+  height: auto;
+  transform: rotate(0deg);
+}
+.pixelRow2:hover {
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.pixelRow2Item,
+.pixelRow2Item:hover {
+  background-color: var(--color-seagreen-500);
+  display: block;
+  width: var(--width-60);
+  height: var(--height-60);
+  gap: var(--gap-0);
+  transform: rotate(180deg);
+}
+.pixelRow2Inner,
+.pixelRow2Item {
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.pixelRow2Inner,
+.pixelRow2Inner:hover {
+  background-color: var(--color-yellowgreen-700);
+  display: block;
+  width: var(--width-60);
+  height: var(--height-60);
+  gap: var(--gap-0);
+  transform: rotate(180deg);
+}
+.frameItem,
+.frameItem:hover {
+  background-color: var(--color-yellowgreen-100);
+  display: block;
+  width: var(--width-60);
+  height: var(--height-60);
+  gap: var(--gap-0);
+  transform: rotate(180deg);
+}
+.frameItem,
+.pixelRow2Child2 {
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.pixelRow2Child2,
+.pixelRow2Child2:hover {
+  background-color: var(--color-lightgoldenrodyellow-300);
+  display: block;
+  width: var(--width-60);
+  height: var(--height-60);
+  gap: var(--gap-0);
+  transform: rotate(180deg);
+}
+.pixelRow3,
+.pixelRow3:hover {
+  align-self: stretch;
+  display: flex;
+  align-items: flex-start;
+  row-gap: var(--gap-20);
+  width: 100%;
+  height: auto;
+  gap: var(--gap-10) var(--gap-0);
+  transform: rotate(0deg);
+}
+.pixelRow3:hover {
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.pixelRow3Child,
+.pixelRow3Child:hover {
+  background-color: var(--color-yellowgreen-200);
+  display: block;
+  width: var(--width-60);
+  height: var(--height-60);
+  gap: var(--gap-0);
+  transform: rotate(180deg);
+}
+.pixelRow3Child,
+.pixelRow3Item {
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.pixelRow3Item,
+.pixelRow3Item:hover {
+  background-color: var(--color-yellowgreen-800);
+  display: block;
+  width: var(--width-60);
+  height: var(--height-60);
+  gap: var(--gap-0);
+  transform: rotate(180deg);
+}
+.pixelRow3Inner,
+.pixelRow3Inner:hover {
+  background-color: var(--color-yellowgreen-300);
+  display: block;
+  width: var(--width-60);
+  height: var(--height-60);
+  gap: var(--gap-0);
+  transform: rotate(180deg);
+}
+.pixelRow3Inner,
+.pixelRow4Child {
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.pixelRow4Child,
+.pixelRow4Child:hover {
+  background-color: var(--color-khaki-100);
+  display: block;
+  width: var(--width-60);
+  height: var(--height-60);
+  gap: var(--gap-0);
+  transform: rotate(180deg);
+}
+.pixelRow4Item,
+.pixelRow4Item:hover {
+  background-color: var(--color-lightgoldenrodyellow-200);
+  display: block;
+  width: var(--width-60);
+  height: var(--height-60);
+  gap: var(--gap-0);
+  transform: rotate(180deg);
+}
+.pixelRow4Item,
+.topLeftPixelArtChild {
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.topLeftPixelArtChild,
+.topLeftPixelArtChild:hover {
+  background-color: var(--color-lightgoldenrodyellow-100);
+  display: block;
+  width: var(--width-60);
+  height: var(--height-60);
+  gap: var(--gap-0);
+  transform: rotate(180deg);
+}
+@media screen and (max-width: 800px) {
+  .learn {
+    gap: 17px;
+    padding: 16px;
+    box-sizing: border-box;
+    align-items: center;
+  }
+  .learnInner {
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    pointer-events: none;
+  }
+  .bottomRightPixelArtParent {
+    height: 100%;
+    min-height: 100%;
+  }
+  .topLeftPixelArt,
+  .bottomRightPixelArt {
+    opacity: 0.55;
+    transform: scale(0.72);
+    transform-origin: top left;
+  }
+  .bottomRightPixelArt {
+    top: auto;
+    right: -230px;
+    bottom: -80px;
+    left: auto;
+    transform-origin: bottom right;
+  }
+  .pixelRow1,
+  .pixelRowBr4 {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 450px) {
+  .learn {
+    padding: 10px;
+  }
+  .bottomRightPixelArtParent {
+    height: 100%;
+    min-height: 100%;
+  }
+  .topLeftPixelArt,
+  .bottomRightPixelArt {
+    transform: scale(0.56);
+  }
+  .bottomRightPixelArt {
+    right: -265px;
+    bottom: -130px;
+  }
+  .pixelRowBr1 {
+    flex-wrap: wrap;
+  }
+  .pixelRow2 {
+    justify-content: center;
+  }
+  .pixelRow3 {
+    flex-wrap: wrap;
+  }
+}

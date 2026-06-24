@@ -1,0 +1,231 @@
+.frameParent,
+.frameParent:hover {
+  display: flex;
+  width: 705px;
+  height: 481px;
+  flex-direction: column;
+  gap: var(--gap-60) var(--gap-10);
+  align-items: flex-start;
+  max-width: 100%;
+}
+.frameParent {
+  margin: 0 !important;
+  position: absolute;
+  top: 310px;
+  right: 55px;
+  flex-shrink: 0;
+  z-index: 2;
+  text-align: center;
+  font-size: var(--fs-36);
+  color: var(--Assets-Colours-Surface-background);
+  font-family: var(--font-hv-fitzgerald);
+}
+.frameParent:hover {
+  justify-content: flex-start;
+}
+.quoteTextBlockParent {
+  position: relative;
+}
+.quoteTextBlockParent,
+.quoteTextBlockParent:hover {
+  display: block;
+  width: 100%;
+  height: 175px;
+  gap: var(--gap-0);
+  max-width: 705px;
+}
+.quoteTextBlock,
+.quoteTextBlock:hover {
+  display: flex;
+  width: 640px;
+  height: auto;
+  flex-direction: column;
+  gap: 1.5px var(--gap-10);
+  align-items: flex-end;
+  transform: rotate(0deg);
+  max-width: 100%;
+}
+.quoteTextBlock {
+  position: absolute;
+  top: 40px;
+  left: 23px;
+}
+.quoteTextBlock:hover {
+  justify-content: flex-start;
+}
+.theIlliterateOfThe21stCen,
+.theIlliterateOfThe21stCen:hover {
+  align-self: stretch;
+  height: var(--height-45);
+  display: flex;
+  align-items: flex-start;
+  padding: var(--padding-0) var(--padding-0) var(--padding-3);
+  box-sizing: border-box;
+  max-width: 100%;
+  width: 100%;
+  gap: var(--gap-10) var(--gap-0);
+  transform: rotate(0deg);
+}
+.theIlliterateOfThe21stCen:hover {
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.theIlliterateOf,
+.theIlliterateOf:hover {
+  display: block;
+  font-style: italic;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  flex: 1;
+  height: auto;
+  max-width: 100%;
+}
+.theIlliterateOf {
+  position: relative;
+}
+.theIlliterateOf:hover {
+  font-family: var(--font-hv-fitzgerald);
+  font-size: var(--fs-36);
+  text-align: center;
+  color: var(--Assets-Colours-Surface-background);
+}
+.beThoseWho {
+  position: relative;
+  max-width: 635.1px;
+  white-space: nowrap;
+  height: auto;
+}
+.beThoseWho,
+.beThoseWho:hover,
+.thoseWhoCannot,
+.thoseWhoCannot:hover {
+  display: block;
+  font-style: italic;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  width: 100%;
+}
+.beThoseWho:hover {
+  font-family: var(--font-hv-fitzgerald);
+  font-size: var(--fs-36);
+  text-align: center;
+  color: var(--Assets-Colours-Surface-background);
+  height: auto;
+  max-width: 635.1px;
+  white-space: nowrap;
+}
+.thoseWhoCannot,
+.thoseWhoCannot:hover {
+  align-self: stretch;
+  height: var(--height-45);
+}
+.thoseWhoCannot {
+  position: relative;
+  align-items: flex-end;
+  justify-content: center;
+}
+.thoseWhoCannot:hover {
+  font-family: var(--font-hv-fitzgerald);
+  font-size: var(--fs-36);
+  text-align: center;
+  color: var(--Assets-Colours-Surface-background);
+}
+.frameChild {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.frameChild,
+.frameChild:hover,
+.frameItem,
+.frameItem:hover {
+  display: block;
+  width: var(--width-48);
+  height: var(--height-33);
+  gap: var(--gap-0);
+}
+.frameItem {
+  position: absolute;
+  top: 110px;
+  left: 657px;
+}
+.frameInner {
+  position: relative;
+  overflow: hidden;
+  max-height: 100%;
+}
+.frameInner,
+.frameInner:hover {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: var(--border-2);
+  box-sizing: border-box;
+  max-width: 692px;
+  margin-top: -11px;
+}
+.learningIsNoLongerOccasionParent,
+.learningIsNoLongerOccasionParent:hover {
+  display: flex;
+  align-self: stretch;
+  width: 100%;
+  height: auto;
+  flex-direction: column;
+  gap: 38px var(--gap-10);
+  align-items: center;
+  padding: var(--padding-0) var(--padding-20);
+  box-sizing: border-box;
+}
+.learningIsNoLongerOccasionParent {
+  text-align: left;
+  font-size: var(--Heading-4);
+  font-family: var(--font-urbanist);
+}
+.learningIsNoLongerOccasionParent:hover {
+  justify-content: flex-start;
+}
+.learningIsNo,
+.learningIsNo:hover {
+  font-weight: 500;
+  display: block;
+  align-self: stretch;
+  width: 100%;
+  height: auto;
+}
+.learningIsNo {
+  position: relative;
+}
+.learningIsNo:hover {
+  font-family: var(--font-urbanist);
+  font-size: var(--Heading-4);
+  text-align: left;
+  color: var(--Assets-Colours-Surface-background);
+}
+@media screen and (max-width: 800px) {
+  .quoteTextBlockParent {
+    max-width: 100%;
+  }
+  .theIlliterateOf {
+    font-size: var(--fs-29);
+  }
+  .beThoseWho {
+    max-width: 100%;
+  }
+  .beThoseWho,
+  .thoseWhoCannot {
+    font-size: var(--fs-29);
+  }
+  .frameInner {
+    max-width: 100%;
+  }
+}
+@media screen and (max-width: 450px) {
+  .beThoseWho,
+  .theIlliterateOf,
+  .thoseWhoCannot {
+    font-size: var(--fs-22);
+  }
+  .learningIsNo {
+    font-size: var(--fs-19);
+  }
+}
