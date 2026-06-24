@@ -12,26 +12,22 @@
 }
 
 
-/* Mobile: Hero first, then everything else */
+/* Mobile: hero order is now handled naturally since learnInner is fixed */
 @media screen and (max-width: 767px) {
   .learn {
     display: flex;
     flex-direction: column;
   }
-  
-  .learnInner {
-    order: -1;
-  }
 }
+
 .learn,
-.learn:hover,
-.learnInner,
-.learnInner:hover {
+.learn:hover {
   display: flex;
   height: auto;
   flex-direction: column;
   align-items: flex-start;
 }
+
 .learn:hover {
   background-color: var(--color-gainsboro);
   width: 100%;
@@ -42,31 +38,42 @@
 }
 .learnInner,
 .learnInner:hover {
-  align-self: stretch;
+  /* Taken fully out of normal flow — purely a visual layer */
+  position: fixed;
+  inset: 0;
   width: 100%;
-  gap: var(--gap-0) var(--gap-10);
-  max-width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.94;
+  overflow: hidden;
 }
 .learnInner {
-  overflow: hidden;
   flex-shrink: 0;
-  opacity: 0.94;
-  z-index: 0;
 }
 .learnInner:hover {
   justify-content: flex-start;
 }
-.bottomRightPixelArtParent {
+
+/* Hero section — viewport-fitted, independent of decorations */
+.heroSection {
   position: relative;
+  width: 100%;
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
+
+.bottomRightPixelArtParent {
+  /* Wrapper inside the fixed learnInner — fills the fixed layer */
+  position: relative;
+  width: 100%;
+  height: 100%;
 }
 .bottomRightPixelArtParent,
 .bottomRightPixelArtParent:hover {
   display: block;
-  width: 100%;
-  /* Reduced height to bring sections closer together */
-  min-height: 85vh;
-  min-height: 85dvh;
-  height: auto;
   max-width: none;
 }
 .bottomRightPixelArt,
@@ -82,7 +89,7 @@
 }
 .bottomRightPixelArt {
   position: absolute;
-  /* Anchor to the bottom-right — adapts naturally to any hero height */
+  /* Anchored to bottom-right of the fixed viewport layer */
   bottom: 0;
   right: 0;
 }
@@ -916,17 +923,14 @@
     box-sizing: border-box;
     align-items: center;
   }
-  .learnInner {
-    position: absolute;
-    inset: 0;
-    height: 100%;
-    pointer-events: none;
-  }
-  .bottomRightPixelArtParent {
-    /* On mobile the pixel art is a decorative overlay — let it fill the hero naturally */
-    height: 100%;
+  /* learnInner stays fixed — no changes needed for mobile */
+  .heroSection {
     min-height: 100vh;
     min-height: 100dvh;
+  }
+  .bottomRightPixelArtParent {
+    /* Fills the fixed viewport layer on mobile too */
+    height: 100%;
   }
   .topLeftPixelArt,
   .bottomRightPixelArt {
@@ -951,10 +955,12 @@
   .learn {
     padding: 10px;
   }
-  .bottomRightPixelArtParent {
-    height: 100%;
+  .heroSection {
     min-height: 100vh;
     min-height: 100dvh;
+  }
+  .bottomRightPixelArtParent {
+    height: 100%;
   }
   .topLeftPixelArt,
   .bottomRightPixelArt {

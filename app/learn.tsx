@@ -10,6 +10,7 @@ import styles from "./learn.module.css";
 const Learn: NextPage = () => {
   return (
     <div className={styles.learn}>
+      {/* Fixed-position decorative pixel art layer — purely visual, out of layout flow */}
       <main className={styles.learnInner}>
         <div className={styles.bottomRightPixelArtParent}>
           <section className={styles.bottomRightPixelArt}>
@@ -103,7 +104,8 @@ const Learn: NextPage = () => {
         </div>
       </main>
       <TB />
-      <div id="home" style={{ width: '100%', display: 'flex', flexDirection: 'column' }}>
+      {/* Hero section — viewport-fitted container independent of decorative elements */}
+      <div className={styles.heroSection} id="home">
         <FrameComponent />
         <FrameComponent1 />
       </div>
