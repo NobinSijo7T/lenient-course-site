@@ -75,7 +75,7 @@ const ScrollStory = ({ chapters: customChapters }: ScrollStoryProps) => {
       if (newIndex !== prev) {
         setIsAnimating(true);
         if (animTimeoutRef.current) clearTimeout(animTimeoutRef.current);
-        animTimeoutRef.current = setTimeout(() => setIsAnimating(false), 450);
+        animTimeoutRef.current = setTimeout(() => setIsAnimating(false), 600);
       }
       return newIndex;
     });
