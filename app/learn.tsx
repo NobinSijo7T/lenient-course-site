@@ -1,5 +1,6 @@
 import type { NextPage } from "next";
 import TB from "../components/t-b";
+import ScrollStory from "../components/ScrollStory";
 import FrameComponent from "../components/frame-component";
 import FrameComponent1 from "../components/frame-component1";
 import FrameComponent2 from "../components/frame-component2";
@@ -102,6 +103,7 @@ const Learn: NextPage = () => {
         </div>
       </main>
       <TB />
+      <ScrollStory />
       <FrameComponent />
       <FrameComponent1 />
       <FrameComponent2 />
