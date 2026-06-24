@@ -11,6 +11,7 @@
   letter-spacing: normal;
 }
 
+
 /* Mobile: Hero first, then everything else */
 @media screen and (max-width: 767px) {
   .learn {
@@ -62,7 +63,12 @@
 .bottomRightPixelArtParent:hover {
   display: block;
   width: 100%;
-  height: 1024px;
+  /* Responsive hero height — fills the visible viewport, grows if content needs more.
+     Uses dvh (dynamic viewport height) so iOS Safari / Android Chrome address bars
+     are accounted for. Falls back to vh for older browsers. */
+  min-height: 100vh;
+  min-height: 100dvh;
+  height: auto;
   max-width: none;
 }
 .bottomRightPixelArt,
@@ -78,7 +84,8 @@
 }
 .bottomRightPixelArt {
   position: absolute;
-  top: 664px;
+  /* Anchor to the bottom-right — adapts naturally to any hero height */
+  bottom: 0;
   right: 0;
 }
 .bottomRightPixelArt:hover {
@@ -918,8 +925,10 @@
     pointer-events: none;
   }
   .bottomRightPixelArtParent {
+    /* On mobile the pixel art is a decorative overlay — let it fill the hero naturally */
     height: 100%;
-    min-height: 100%;
+    min-height: 100vh;
+    min-height: 100dvh;
   }
   .topLeftPixelArt,
   .bottomRightPixelArt {
@@ -946,7 +955,8 @@
   }
   .bottomRightPixelArtParent {
     height: 100%;
-    min-height: 100%;
+    min-height: 100vh;
+    min-height: 100dvh;
   }
   .topLeftPixelArt,
   .bottomRightPixelArt {

@@ -1,7 +1,7 @@
 .frameParent {
   position: absolute;
   margin: 0 !important;
-  top: 300px;
+  top: 200px;
   left: 100px;
   flex-shrink: 0;
   z-index: 2;

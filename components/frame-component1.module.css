@@ -11,7 +11,7 @@
 .frameParent {
   margin: 0 !important;
   position: absolute;
-  top: 310px;
+  top: 210px;
   right: 55px;
   flex-shrink: 0;
   z-index: 2;
