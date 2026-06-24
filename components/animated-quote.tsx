@@ -52,8 +52,8 @@ export default function AnimatedQuote({ children, className, delayOffset = 0 }: 
 
     return (
       <motion.div
-        className={className}
-        style={{ display: 'inline-block', overflow: 'hidden' }}
+        className={`${className || ''} animate-text-glow`}
+        style={{ display: 'inline-block', overflow: 'visible' }}
         variants={container}
         initial="hidden"
         whileInView="visible"
@@ -75,7 +75,7 @@ export default function AnimatedQuote({ children, className, delayOffset = 0 }: 
   // Fallback for React nodes
   return (
     <motion.div
-      className={className}
+      className={`${className || ''} animate-text-glow`}
       initial={{ opacity: 0, y: 30, filter: 'blur(8px)' }}
       whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
       viewport={{ once: true, margin: "-100px" }}

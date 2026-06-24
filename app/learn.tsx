@@ -1,5 +1,6 @@
 import type { NextPage } from "next";
 import TB from "../components/t-b";
+import SquareField from "../components/SquareField";
 import ScrollStory from "../components/ScrollStory";
 import FrameComponent from "../components/frame-component";
 import FrameComponent1 from "../components/frame-component1";
@@ -12,6 +13,14 @@ const Learn: NextPage = () => {
     <div className={styles.learn}>
       <main className={styles.learnInner}>
         <div className={styles.bottomRightPixelArtParent}>
+          <SquareField
+            squareSize={6}
+            squareSpacing={20}
+            cursorRadius={400}
+            bulgeStrength={50}
+            gradientFrom="rgba(154, 230, 0, 0.8)"
+            gradientTo="rgba(100, 180, 50, 0.7)"
+          />
           <section className={styles.bottomRightPixelArt}>
             <div className={styles.bottomRightPixelArtChild} />
             <div className={styles.pixelRowBr1}>
@@ -103,10 +112,16 @@ const Learn: NextPage = () => {
         </div>
       </main>
       <TB />
-      <FrameComponent />
-      <FrameComponent1 />
-      <ScrollStory />
-      <FrameComponent2 />
+      <div id="home" style={{ width: '100%', display: 'flex', flexDirection: 'column' }}>
+        <FrameComponent />
+        <FrameComponent1 />
+      </div>
+      <div id="courses" style={{ width: '100%', display: 'flex', flexDirection: 'column' }}>
+        <ScrollStory />
+      </div>
+      <div id="speakers" style={{ width: '100%', display: 'flex', flexDirection: 'column' }}>
+        <FrameComponent2 />
+      </div>
       <Footer />
     </div>
   );

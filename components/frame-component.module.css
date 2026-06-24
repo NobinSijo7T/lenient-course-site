@@ -12,140 +12,26 @@
   width: 510px;
   height: 510px;
 }
-.frameChild {
-  position: absolute;
-  top: 0;
-  left: 387px;
-  object-fit: cover;
+
+/* Hero image animations */
+@keyframes floatAnimation {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-10px) scale(1.02);
+  }
 }
-.frameChild,
-.frameChild2,
-.frameChild2:hover,
-.frameChild3,
-.frameChild3:hover,
-.frameChild4,
-.frameChild4:hover,
-.frameChild5,
-.frameChild5:hover,
-.frameChild6,
-.frameChild6:hover,
-.frameChild7,
-.frameChild7:hover,
-.frameChild8,
-.frameChild8:hover,
-.frameChild:hover,
-.frameIcon,
-.frameIcon:hover,
-.frameInner,
-.frameInner:hover,
-.frameItem,
-.frameItem:hover {
-  display: none;
+
+@keyframes pulseGlow {
+  0%, 100% {
+    filter: drop-shadow(0 0 10px rgba(154, 230, 0, 0.3));
+  }
+  50% {
+    filter: drop-shadow(0 0 20px rgba(154, 230, 0, 0.6));
+  }
 }
-.frameChild2,
-.frameChild3,
-.frameChild4,
-.frameChild5,
-.frameChild6,
-.frameChild7,
-.frameChild8,
-.frameIcon,
-.frameInner,
-.frameItem {
-  position: absolute;
-  top: 129px;
-  left: 0;
-  object-fit: cover;
-}
-.frameChild2,
-.frameChild3,
-.frameChild4,
-.frameChild5,
-.frameChild6,
-.frameChild7,
-.frameChild8,
-.frameIcon,
-.frameInner {
-  left: 258px;
-}
-.frameChild2,
-.frameChild3,
-.frameChild4,
-.frameChild5,
-.frameChild6,
-.frameChild7,
-.frameChild8,
-.frameIcon {
-  top: 258px;
-  left: 0;
-}
-.frameChild2,
-.frameChild3,
-.frameChild4,
-.frameChild5,
-.frameChild6,
-.frameChild7,
-.frameChild8 {
-  left: 129px;
-}
-.frameChild3,
-.frameChild4,
-.frameChild5,
-.frameChild6,
-.frameChild7,
-.frameChild8 {
-  left: 258px;
-}
-.frameChild4,
-.frameChild5,
-.frameChild6,
-.frameChild7,
-.frameChild8 {
-  top: 387px;
-  left: 0;
-}
-.frameChild5,
-.frameChild6,
-.frameChild7,
-.frameChild8 {
-  left: 129px;
-}
-.frameChild6,
-.frameChild7,
-.frameChild8 {
-  left: 258px;
-}
-.frameChild7,
-.frameChild8 {
-  top: 0;
-  left: 0;
-}
-.frameChild8 {
-  left: 129px;
-}
-.frameDiv,
-.frameGroup {
-  position: absolute;
-}
-.frameGroup {
-  top: 129px;
-  left: 129px;
-  overflow: visible;
-}
-.frameGroup,
-.frameGroup:hover {
-  display: block;
-  width: auto;
-  height: auto;
-  gap: var(--gap-0);
-}
-.frameDiv {
-  display: none;
-}
-.frameDiv,
-.frameDiv:hover {
-  display: none;
-}
+
 .chatgptImageJun19202609 {
   position: absolute;
   top: 0;
@@ -153,7 +39,16 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  animation: floatAnimation 4s ease-in-out infinite;
+  transition: transform 0.3s ease, filter 0.3s ease;
 }
+
+.chatgptImageJun19202609:hover {
+  transform: scale(1.05) rotate(2deg) !important;
+  filter: drop-shadow(0 0 25px rgba(154, 230, 0, 0.8));
+  animation: pulseGlow 1.5s ease-in-out infinite;
+}
+
 .chatgptImageJun19202609,
 .chatgptImageJun19202609:hover {
   display: block;

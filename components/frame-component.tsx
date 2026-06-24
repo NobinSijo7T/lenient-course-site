@@ -1,5 +1,6 @@
 import type { NextPage } from "next";
 import Image from "next/image";
+import DotField from "./DotField";
 import styles from "./frame-component.module.css";
 
 export type FrameComponentType = {
@@ -9,6 +10,17 @@ export type FrameComponentType = {
 const FrameComponent: NextPage<FrameComponentType> = ({ className = "" }) => {
   return (
     <section className={[styles.frameParent, className].join(" ")}>
+      <DotField
+        dotRadius={3}
+        dotSpacing={20}
+        cursorRadius={500}
+        bulgeOnly={true}
+        bulgeStrength={67}
+        glowRadius={160}
+        gradientFrom="rgba(168, 85, 247, 0.6)"
+        gradientTo="rgba(130, 100, 180, 0.5)"
+        glowColor="#a855f7"
+      />
       <Image
         className={styles.chatgptImageJun19202609}
         width={510}

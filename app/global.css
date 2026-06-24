@@ -31,6 +31,21 @@ body {
   font-optical-sizing: auto;
   font-style: normal;
 }
+
+@keyframes text-glow-pulse {
+  0%, 100% {
+    text-shadow: 0 0 4px rgba(154, 230, 0, 0.4);
+  }
+  50% {
+    text-shadow: 0 0 15px rgba(154, 230, 0, 1), 0 0 30px rgba(154, 230, 0, 0.6);
+  }
+}
+
+.animate-text-glow {
+  animation: text-glow-pulse 4s ease-in-out infinite;
+  animation-delay: 2s; /* Wait for initial Framer Motion reveal */
+}
+
 :root {
   /* Figma Variables */
 

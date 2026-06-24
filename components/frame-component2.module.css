@@ -53,7 +53,29 @@
   border-radius: 34px;
   max-width: 451px;
   min-height: var(--min-h-64);
+  animation: slideInScale 1s ease-out;
 }
+
+@keyframes slideInScale {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px) scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
 .speakerSpotlightWrapper {
   cursor: pointer;
   padding: 0;
@@ -63,6 +85,7 @@
   flex-direction: row;
   border: var(--border-2);
   box-sizing: border-box;
+  animation: pulse 0.6s ease-in-out;
 }
 .speakerSpotlightWrapper,
 .speakerSpotlightWrapper:active {
@@ -72,7 +95,20 @@
 }
 .speakerSpotlight {
   position: relative;
+  animation: fadeInUp 1.2s ease-out 0.3s both;
 }
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .speakerSpotlight,
 .speakerSpotlight:hover {
   font-weight: 700;
