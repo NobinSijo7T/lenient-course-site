@@ -1,0 +1,49 @@
+{
+  "chapters": [
+    {
+      "name": "Chapter One",
+      "leftMedia": {
+        "type": "image",
+        "src": "/images/1-left.png",
+        "title": "Left Image One",
+        "caption": "Chapter one left visual"
+      },
+      "rightMedia": {
+        "type": "image",
+        "src": "/images/1-right.png",
+        "title": "Right Image One",
+        "caption": "Chapter one right visual"
+      }
+    },
+    {
+      "name": "Chapter Two",
+      "leftMedia": {
+        "type": "image",
+        "src": "/images/2-left.png",
+        "title": "Left Image Two",
+        "caption": "Chapter two left visual"
+      },
+      "rightMedia": {
+        "type": "image",
+        "src": "/images/2-right.png",
+        "title": "Right Image Two",
+        "caption": "Chapter two right visual"
+      }
+    },
+    {
+      "name": "Chapter Three",
+      "leftMedia": {
+        "type": "image",
+        "src": "/images/3-left.png",
+        "title": "Left Image Three",
+        "caption": "Chapter three left visual"
+      },
+      "rightMedia": {
+        "type": "image",
+        "src": "/images/3-right.png",
+        "title": "Right Image Three",
+        "caption": "Chapter three right visual"
+      }
+    }
+  ]
+}

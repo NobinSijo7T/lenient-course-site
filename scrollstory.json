@@ -1,0 +1,49 @@
+{
+  "chapters": [
+    {
+      "name": "Chapter 1",
+      "leftMedia": {
+        "type": "image",
+        "src": "/images/1-left.png",
+        "title": "Left Title for Chapter 1",
+        "caption": "Caption for left image of chapter 1"
+      },
+      "rightMedia": {
+        "type": "image",
+        "src": "/images/1-right.png",
+        "title": "Right Title for Chapter 1",
+        "caption": "Caption for right image of chapter 1"
+      }
+    },
+    {
+      "name": "Chapter 2",
+      "leftMedia": {
+        "type": "image",
+        "src": "/images/2-left.png",
+        "title": "Left Title for Chapter 2",
+        "caption": "Caption for left image of chapter 2"
+      },
+      "rightMedia": {
+        "type": "image",
+        "src": "/images/2-right.png",
+        "title": "Right Title for Chapter 2",
+        "caption": "Caption for right image of chapter 2"
+      }
+    },
+    {
+      "name": "Chapter 3",
+      "leftMedia": {
+        "type": "image",
+        "src": "/images/3-left.png",
+        "title": "Left Title for Chapter 3",
+        "caption": "Caption for left image of chapter 3"
+      },
+      "rightMedia": {
+        "type": "image",
+        "src": "/images/3-right.png",
+        "title": "Right Title for Chapter 3",
+        "caption": "Caption for right image of chapter 3"
+      }
+    }
+  ]
+}

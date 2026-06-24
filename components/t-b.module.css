@@ -16,12 +16,12 @@
 }
 .tb {
   margin: 0 !important;
-  position: absolute;
+  position: fixed;
   top: 20px;
   left: 50%;
   transform: translateX(-50%);
   flex-shrink: 0;
-  z-index: 4;
+  z-index: 50;
   text-align: left;
   font-size: var(--Heading-5);
   color: var(--Assets-Colours-Primary-text);
@@ -356,8 +356,9 @@
 @media screen and (max-width: 800px) {
   .tb,
   .tb:hover {
-    position: relative;
-    top: auto;
+    position: sticky;
+    top: 12px;
+    z-index: 50;
     left: auto;
     transform: none;
     width: min(100%, 560px);

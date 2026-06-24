@@ -10,6 +10,22 @@
   line-height: normal;
   letter-spacing: normal;
 }
+
+/* Mobile: Hero first, then everything else */
+@media screen and (max-width: 767px) {
+  .learn {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .learn > main {
+    order: 1;
+  }
+  
+  .learn > header {
+    order: 0;
+  }
+}
 .learn,
 .learn:hover,
 .learnInner,
